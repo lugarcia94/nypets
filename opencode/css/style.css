@@ -2299,10 +2299,11 @@ body.moving--down .head {
     opacity: 1;
     visibility: visible;
     bottom: 40px;
+    z-index: 999999;
   }
 }
 
-/* line 310, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 311, src/assets/css/elements/showcase/_showcase_default.scss */
 .showcase__buy--button {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2321,14 +2322,14 @@ body.moving--down .head {
   width: 100%;
 }
 
-/* line 321, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 322, src/assets/css/elements/showcase/_showcase_default.scss */
 .showcase__buy--button:hover {
   background: #fff;
   border: 1px solid #00a3d8;
   color: #00a3d8;
 }
 
-/* line 327, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 328, src/assets/css/elements/showcase/_showcase_default.scss */
 .showcase__buy--quick {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2354,13 +2355,13 @@ body.moving--down .head {
 }
 
 @media (max-width: 767px) {
-  /* line 327, src/assets/css/elements/showcase/_showcase_default.scss */
+  /* line 328, src/assets/css/elements/showcase/_showcase_default.scss */
   .showcase__buy--quick {
     display: none;
   }
 }
 
-/* line 350, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 351, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box {
   display: block;
   font-size: 0;
@@ -2370,18 +2371,18 @@ body.moving--down .head {
   text-transform: lowercase;
 }
 
-/* line 358, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 359, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box br {
   line-height: 0;
 }
 
-/* line 362, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 363, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box br:first-child,
 .formas-pagamento-box .txt-forma-pagamento {
   display: none;
 }
 
-/* line 367, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 368, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box > * {
   color: #3a3939;
   font-size: 13px;
@@ -2389,19 +2390,19 @@ body.moving--down .head {
   line-height: 22px;
 }
 
-/* line 374, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 375, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box > * {
   text-transform: none;
 }
 
-/* line 378, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 379, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box .preco-avista,
 .formas-pagamento-box .txt-avista {
   color: #4ca014;
   font-weight: 700;
 }
 
-/* line 384, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 385, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box strong,
 .formas-pagamento-box .color {
   color: #00a3d8;
@@ -2409,12 +2410,12 @@ body.moving--down .head {
   font-weight: 700;
 }
 
-/* line 392, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 393, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box .txt-corparcelas .preco-parc2 {
   font-size: 0;
 }
 
-/* line 396, src/assets/css/elements/showcase/_showcase_default.scss */
+/* line 397, src/assets/css/elements/showcase/_showcase_default.scss */
 .formas-pagamento-box .txt-corparcelas .preco-parc2 {
   margin-right: 4px;
 }
