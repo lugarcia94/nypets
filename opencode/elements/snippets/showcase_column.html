@@ -1,0 +1,13 @@
+{% if products|length > 0 %}
+<div class="showcase">
+
+    {% if showcaseTitle %}
+    {{ showcaseTitle }}
+    {% endif %}
+    <ul>
+        {% for product in products %}
+        {% element 'snippets/product_column' {"product": product} %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

@@ -1,0 +1,58 @@
+.page-contact {
+  h3 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  main {
+    p, span, a {
+      color: #333;
+      font-size: 13px;
+    }
+  }
+
+  .formulario-contato {
+    background: #eee;
+    padding: 15px;
+
+    label {
+      display: block;
+      max-width: 400px;
+      width: 100%;
+
+      span {
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: normal;
+        margin: 5px 0;
+        text-transform: uppercase;
+      }
+    }
+
+    #imagem {
+      background-color: $cor01;
+      border-radius: 3px;
+      color: white;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      height: 35px;
+      line-height: 35px;
+      margin-left: 8px;
+      text-align: center;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+  }
+
+  #captcha-loader {
+    margin: 10px 0;
+  }
+
+  .main {
+    padding: 10px 0 20px;
+  }
+}

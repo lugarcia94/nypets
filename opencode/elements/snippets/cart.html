@@ -1,0 +1,10 @@
+<div id="cart" class="header__cart" data-minicart-open>
+    <div class="dropdown">
+        <a href="{{ links.cart }}" class="header__cart-link">
+            <svg class="header__cart-icon icon--cart"><use xlink:href="#icon-shopping-bag"></use></svg>
+            <span class="header__cart-amount" data-cart="amount-auaha">{{ cart.amount }}</span>
+        </a>
+        
+        <div class="header__cart-dropdown  cart__dropdown" data-minicart={{ store.id }}></div>
+    </div>
+</div>

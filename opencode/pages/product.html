@@ -1,0 +1,173 @@
+<div class="produto" itemscope itemtype="http://schema.org/Product">
+    <div class="row">
+        <section class="product__gallery col-xs-12 col-md-7">
+            <h1 itemprop="name" class="product__name visible-xs visible-sm">{{ product.name }}</h1>
+            {% if utils.is_mobile %}
+                <ul class="product-info__list">
+                    <li class="product-info__item">
+                        <span class="product-info__title">C&#243;digo:</span>
+                        <span class="product-info__desc" itemprop="sku">{{ product.id }}</span>
+                    </li>
+                </ul>
+            {% endif %}
+            <div class="product__image" id="visualBlock">
+                {{ productHelper.gallery() }}
+            </div>
+        </section>
+
+        <section class="product__general-information col-xs-12 col-md-5">
+            
+            <div class="product__left-wrapper">
+                <form class="product__form" id="form_comprar" method="post" data-app="product.buy-form" action="{{ links.cart_add ~ product.id }}">
+                    {% if not utils.is_mobile %}
+                        <ul class="product-info__list">
+                            {% element 'snippets/breadcrumb' %}
+        
+                            <li class="product-info__item">
+                                <span class="product-info__title">C&#243;digo:</span>
+                                <span class="product-info__desc" itemprop="sku">{{ product.id }}</span>
+                            </li>
+                        </ul>
+                    {% endif %}
+    
+                    <h1 itemprop="name" class="product__name hidden-xs hidden-sm">{{ product.name }}</h1>
+    
+                    <div class="product-info__item product__ranking">
+                        {% if product.ranking %}
+                        <div class="product__rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                            <i class="product__rating-stars" data-stars-count="{{ product.ranking.rating }}"></i>
+                            <span class="product__ratings-qntdy">
+                                {% if product.ranking.count %}
+                                    <span itemprop="reviewCount">( {{ product.ranking.count }} )</span> <span itemprop="ratingValue">{{ ranking.rating }}</span>
+                                {% else %}  
+                                    (0)
+                                {% endif %}
+                            </span>
+                        </div>
+                        {% endif %}
+                    </div>    
+                    <div class="product-main__prices">
+
+                        <div id="preco">
+                            {{ productHelper.pricing() }}
+                            <div id="produto_nao_disp">
+                                <input type="hidden" name="verifica_variacao" id="verifica_variacao" value="">
+                                <input type="hidden" name="verifica_clientes_aguardando" id="verifica_clientes_aguardando" value="1">
+                                <input type="hidden" name="verifica_estoque_venda" id="verifica_estoque_venda" value="">
+                                <input type="hidden" name="verifica_variacao_dupla_valor" id="verifica_variacao_dupla_valor" value="0">
+                                <input type="hidden" name="layout_variacao" id="layout_variacao" value="1">
+                                <input type="hidden" name="define_radio_select" id="define_radio_select" value="">
+                            </div>
+   
+                        </div>   
+
+                        {% if productHelper.variants() %}
+                        <div class="product__variations">{{ productHelper.variants() }}</div>
+                        {% endif%}
+
+                        {% if product.available %}
+                        <div class="product__buy">
+                            <div data-app="product.quantity" class="product__quantity">
+                                <span id="span_erro_carrinho" class="blocoAlerta" style="display:none;">Selecione uma op&#231;&#227;o para varia&#231;&#227;o do produto</span>
+                                <button type="button" id="plus" class="product__quantity__button" onclick="process(1)">+</button>
+                                <input name="quant" id="quant" class="product__quantity__input" size="1" type="text" value="1" maxlength="5"/>
+                                <button type="button" id="minus" class="product__quantity__button" onclick="process(-1)"> - </button>
+                            </div>
+                            
+                            <button type="submit" id="product__button--buy" class="product__button--buy"> Comprar Agora! </button>
+
+                        </div>
+                        <div class="product__payments-wrapper hide-payments" style="display: none;">
+                            <span class="product__payments-anchor">Mais formas de pagamento</span>
+                            
+                            <div class="product__payments" id="{{ product.id }}">
+                                <div class="product__payments-content"></div>
+                            </div>
+                        </div> 
+                        {% endif %}
+                    </div>
+                </form>
+                    {% if product.additional_information %}
+                    <div class="product-additional-information">
+                        {{ product.additional_information }}
+                    </div>
+                    {% endif %}
+
+                    <div class="product__shipping">
+                        {{ productHelper.shipping() }}
+                        <div class="product__shipping--link">
+                            <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" class="shipping__link" target="_blank">N&#227;o sei o meu CEP</a>
+                        </div>
+
+                        {% if settings.freeShippingActived == '1' %}
+                        <div class="free-shipping">
+                            <svg class="free-shipping__icon icon--shipping">
+                                <use xlink:href="#icon-shipping"></use>
+                            </svg>
+                            <span class="free-shipping__title">
+                                Frete Gr&#225;tis
+                            </span>
+                            <span class="free-shipping__desc">
+                                {{ settings.freeShipping }}
+                            </span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="product__share">
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+            </div>
+        </section>
+
+        {% if productHelper.bundle %}
+            <section class="product__bundle col-xs-12">
+                <h4 class="product__title">Compre Junto</h4>
+                {{ productHelper.bundle }}
+            </section>
+        {% endif %}
+        
+        <section id="ProdBlock" class="product__tabs col-xs-12">
+            <a name="formaPagto"></a>
+            <div id="ProdAbas" class="abasProduto">
+                <ul class="tabs__list">
+                    {% for key, tab in productTabs %}
+                    {% if tab.container_id %}
+                    <li id="{{ tab.id }}" class="tabs__item {% if key=='description' %}aberta {% endif %}">
+                        <a href="#" data-tab-container-id="{{ tab.container_id }}" data-tab-url="{{ tab.url }}">{{ tab.description }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+    
+            <div id="descricao" class="prodBox tabs__content  description" itemprop="description">
+                {{ product.description ? product.description : product.description_small }}
+            </div>
+    
+            <div id="itensInclusos" class="prodBox tabs__content product__included">
+                {{ product.included_items }}
+            </div>
+            
+            {{ productTabs.custom.content }}
+            {{ productTabs.downloads.content }}
+    
+            <div data-app="product.payment-methods" id="formasPagto" class="prodBox" style="display:none;"></div>
+        </section>
+    
+        <section class="product__comments col-xs-12">
+            <span class="store__title product__title">Avalia&#231;&#245;es dos clientes</span>
+    
+            <div id="coments" class="comments">{% element 'product/comments' %}</div>    
+        </section>            
+
+        {% if product.related_products %}
+        <section class="col-xs-12 product__related">
+            <span class="product__title">Talvez voc&#234; goste</span>
+            <div class="product__related showcase-carousel">
+                {% element 'snippets/showcase' {"products": product.related_products } %}
+            </div>
+        </section>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<!-- instagram -->
+<section class="instagram__wrapper">
+    <div class="instagram__container">
+        <h4 class="instagram__title">
+            <a href="https://www.instagram.com/{{ settings.instagram }}" class="instagram__link" target="_blank">
+                <img src="{{ asset('img/nypets.png') }}" class="instagram__title-img" alt="{{ store.name }}" title="{{ store.name }}">
+            </a>
+        </h4>
+        <span data-user-id="{{ settings.instagramUserId }}" class="instagram__user-id hidden"></span>
+        <span data-token="{{ settings.instagramToken }}" class="instagram__token hidden"></span>
+
+        <div id="instafeed-gallery-feed" class="instagram-imagens"></div>
+
+        <span class="instagram__text">Publique seu produto da NY Pets com a <strong>#ChegoumeuNYPets</strong> e apare&#231;a em nosso Instagram. </span>
+    </div>
+</section>
+<!-- end instagram -->    

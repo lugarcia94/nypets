@@ -1,0 +1,48 @@
+// Variaveis Gerais do Tema
+@import "variable";
+@import "functions";
+@import "elements/snippets/mixins";
+
+// Global
+@import "elements/global/global_default";
+
+// Header
+@import "elements/header/top_bar/top_bar_default";
+@import "elements/header/header_bar/header_bar_default";
+@import "elements/header/nav_bar/nav_bar_default";
+
+// Showcase
+@import "elements/showcase/showcase_default";
+
+// Page Category
+@import "elements/category/category_default";
+
+// Page Products
+@import "elements/product/products_default";
+
+// Page checkout
+@import "elements/checkout/checkout_default";
+
+// Asides Mobile
+@import "elements/aside/aside_default";
+
+// User
+@import "elements/user/login_default";
+@import "elements/user/register_default";
+@import "elements/user/central_do_cliente";
+@import "elements/user/contact_default";
+@import "elements/newsletter/newsletter";
+
+// Defini��es Reset
+@import "default";
+
+// Footer
+@import "elements/footer/footer_default";
+
+// Libs
+
+// Pagination Infinite
+@import "../../libs/pagination/infinite";
+
+// Thumbs - Product page
+@import "../../libs/thumbs/index";

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-br" data-store="{{ store.id }}" class="page-{{ pages.current }}">
+    <head>
+       
+        <!-- ============== Meta Tags =============== -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- [if IE]<meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        {{ html.charset() }}
+	    <!--{{ tray.styles }}-->
+        <!-- ============== end Metas Tags =============== -->
+
+        <!-- ============== Js Pace load =============== -->
+	    <script type="text/javascript" src="{{ asset('js/pace.min.js') }}"></script>
+	    <script type="text/javascript" src="{{ asset('js/tray_functions.js') }}"></script>
+        <!-- ============== end Js Pace load =============== -->
+
+        <!-- ============== Styles =============== -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800|Quicksand:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" href="{{ asset('css/others/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/others/owl.carousel.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <!-- ============== end Styles =============== -->
+
+        {{ tray.analytics }}
+        {{ googleTagManager.header(pages.current, tagManagerData) }}
+
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9&appId=1827951590754210";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    </head>
+    <body>
+        {% element 'snippets/svg-sprite' %}
+        {{ googleTagManager.top(pages.current, tagManagerData) }}
+        {{ store.chat }}
+
+        {% if pages.current in ['home'] %}
+            {% element 'snippets/lightbox' %}
+        {% endif %}
+
+        {% if pages.current not in ['checkout_cart', 'checkout_payment'] %}
+            {% element 'header' %}
+        {% else %}
+            {% element 'header_checkout' %}
+        {% endif %}
+
+        <main class="main">
+            {% element 'snippets/banner_home' %}
+
+            {% if pages.current != 'catalog' and pages.current != 'home' %}
+                <div class="main__container">
+                    {{ content_for_layout }}
+                </div>
+            {% else %}
+                {{ content_for_layout }}
+            {% endif %}
+        </main>
+
+        {% element 'footer' %}
+
+
+        <div data-quickview></div>
+
+        {% element 'snippets/modal' %}
+        {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+        {{ tray.scripts }}
+        <script> window.$tray = jQuery; </script>
+        {{
+            html.script({
+                '0' : tray.paths.js ~ 'dist/application.min.js?' ~ utils.assets_version,
+                '1' : tray.paths.js ~ 'init.js?' ~ utils.assets_version
+            })
+        }}
+        
+        {% element 'snippets/pageview' %}
+
+        <script defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script defer src="{{ asset('js/plugins.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/stickyfill.min.js') }}"></script>
+        <script defer type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+        <script defer type="text/javascript" src="{{ asset('js/auaha.js') }}"></script>
+    </body>
+</html>

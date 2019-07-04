@@ -1,0 +1,60 @@
+<footer class="footer col-xs-12">
+    <div class="footer__container">
+        {% element 'snippets/newsletter' %}
+        <div class="footer__wrapper">
+            <div class="footer__pages">
+                <img src="{{ asset(settings.logo) }}" class="footer__brand" alt="{{ store.name }}" title="{{ store.name }}">
+                <p class="footer__copyright-text">{{ settings.copyright }}</p>
+            </div>
+
+            <div class="footer__pages">
+                <div class="footer__pages footer__pages--account">
+                    <h4 class="footer__title">Contato</h4>
+                    {% element 'snippets/list_contact' %}
+                </div>
+            </div>
+
+            <div class="footer__pages">
+                <nav class="footer__pages footer__pages--institutional">
+                    <h4 class="footer__title">Institucional</h4>
+                    {% for link in settings.institutional %}
+                        {% if link.url != "" and link.name != "" %}
+                        <a href="{{ link.url }}" class="footer__link">{{ link.name }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </nav>
+            </div>
+
+            <div class="footer__pages">
+                <div class="footer__payment">
+                    <h4 class="footer__title">Pagamento</h4>
+                    <ul class="footer__payment-list">
+                        {% for payment in paymentMethods.credit %}
+                        <li class="footer__payment-item"><img src="{{ payment.thumbnail.url }}" class="footer__payment-image" alt="{{ payment.display_name }}"></li>
+                        {% endfor %}
+                        {% for payment in paymentMethods.order %}
+                        <li class="footer__payment-item"><img src="{{ payment.thumbnail.url }}" class="footer__payment-image" alt="{{ payment.display_name }}"></li>
+                        {% endfor %}
+                        {% if seals.ebit %}<li class="footer__security-seal seal--ebit">{{ seals.ebit }}</li>{% endif %}
+                        {% if seals.hackersafe %}<li class="footer__security-seal seal--hackersafe">{{ seals.hackersafe }}</li>{% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <ul class="footer__credit-list">
+            <li class="footer__credit-item">
+                <a href="https://www.auaha.com.br/" class="footer__credit-link footer__credit-link--auaha" target="_blank">
+                    <img src="{{ asset('img/logo.svg') }}" class="footer__credit-image" alt="Ag&#234;ncia Auaha"/>
+                </a>
+            </li>
+            <li class="footer__credit-item">
+                <a href="https://www.tray.com.br/" class="footer__credit-link footer__credit-link--tray" target="_blank">
+                    <img src="{{ asset('img/logo-tray2.svg') }}" class="footer__credit-image" alt="Empresa Tray"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>    
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d10c5621bce028c"></script>

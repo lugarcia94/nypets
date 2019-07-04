@@ -1,0 +1,49 @@
+.owl-carousel {
+  position: relative;
+}
+
+.owl-buttons {
+  .owl-prev {
+    left: 15px;
+  }
+
+  .owl-next {
+    right: 15px;
+  }
+
+  .owl-prev,
+  .owl-next {
+    background: $cor01 !important;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    text-align: center;
+    @include transition();
+
+    i {
+      color: white;
+      font-size: 25px;
+    }
+  }
+}
+
+.owl-pagination {
+  .owl-page {
+    span {
+      background: $cor02 !important;
+      height: 10px !important;
+      width: 10px !important;
+    }
+
+    &.active {
+      span {
+        background: $cor01 !important;
+      }
+    }
+  }
+}

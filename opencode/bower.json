@@ -1,0 +1,20 @@
+{
+  "name": "Taitamariki v1.2",
+  "homepage": "http://www.auaha.com.br",
+  "authors": [
+    "Henrique Batista <henrique.batista@auaha.com.br>",
+    "Willian Hideki <willhkblz@gmail.com>"
+  ],
+  "description": "Tema base da Auaha para desenvolvimento das lojas para Tray",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": ">=3.2.0"
+  }
+}

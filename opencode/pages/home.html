@@ -1,0 +1,64 @@
+<div class="main__container">
+    {% element 'snippets/banner_info' %}
+
+    {% if banner.extra1 or banner.extra2 %}
+    <div class="banner__wrapper--extras">
+        <div class="banner__list">
+            {% if banner.extra1 %}<div class="banner__item">{{ banner.extra1 }}</div>{% endif %}
+            {% if banner.extra2 %}<div class="banner__item">{{ banner.extra2 }}</div>{% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+<!-- VITRINE 1 -->
+    <div class="home__container">
+        {% if settings.showcaseFilter01 %}
+        <section class="showcase__carousel showcase__carousel--one">
+            {% set products = Products({
+            'categories': settings.showcaseCategory01,
+            'filter': settings.showcaseFilter01,
+            'limit': settings.showcaseQuantity01,
+            'order': settings.showcaseOrder01
+            }) %}
+
+            {% element 'snippets/showcase' {
+            "showcaseTitle": settings.showcaseTitle01,
+            "showcaseSubtitle": settings.showcaseSubtitle01,
+            "products": products
+            } %}
+        </section>
+        {% endif %}
+    </div>
+
+    {% if banner.extra3 %}
+    <div class="banner-showcase">
+        {{ banner.extra3 }}
+    </div>
+    {% endif %}
+
+    <!-- VITRINE 2 -->
+    {% if settings.showcaseFilter02 %}
+    <section class="showcase__carousel showcase__carousel--two">
+        {% set products = Products({
+        'categories': settings.showcaseCategory02,
+        'filter': settings.showcaseFilter02,
+        'limit': settings.showcaseQuantity02,
+        'order': settings.showcaseOrder02
+        }) %}
+
+        {% element 'snippets/showcase' {
+        "showcaseTitle": settings.showcaseTitle02,
+        "showcaseSubtitle": settings.showcaseSubtitle02,
+        "products": products
+        } %}
+    </section>
+    {% endif %}
+</div>
+
+<section class="home-videos">
+    {% element 'snippets/list_videos' %}
+</section>
+
+<div class="main__container">
+    {% element 'snippets/instagram' %}
+</div>

@@ -1,0 +1,69 @@
+@media (max-width: 1199px) {
+  .smart_filter {
+    background-color: white;
+    bottom: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 3/10);
+    display: block !important;
+    height: 100vh;
+    left: -310px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
+    padding: 30px 20px;
+    transition: $transition;
+    top: 0;
+    width: 300px;
+    z-index: 300;
+
+    .mobileFilter {
+      border-radius: 2px;
+      font-size: 15px;
+      line-height: 30px;
+      padding: 0;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      width: 30px;
+      z-index: 30;
+
+      i {
+        color: white;
+      }
+    }
+  }
+}
+
+.ac_sm_ft {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  #mask {
+    background: rgba($cor02, (5/10));
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 19;
+  }
+}
+
+.ac_sm_ft {
+  .smart_filter {
+    left: 0;
+    z-index: 99999;
+
+    form {
+      position: absolute;
+      overflow-x: scroll;
+      max-height: 90%;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .quickview__button {
+    display: none;
+  }
+}

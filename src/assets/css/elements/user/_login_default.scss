@@ -1,0 +1,102 @@
+.page-login {
+  .container-titulo-login {
+    display: none;
+  }
+  h3 {
+    @include text(#333, '', 20px, '', 400, uppercase);
+    margin: 10px 0 60px;
+  }
+  .board {
+    align-items: center;
+    font-size: 0;
+    min-height: 250px;
+    padding: 50px 0 30px;
+    .Login {
+      display: inline-block;
+      padding: 15px;
+      vertical-align: top;
+      width: 50%;
+      @media(max-width: 767px) {
+        text-align: center;
+        width: 100%;
+      }
+      fieldset {
+        label {
+          @include text(#333, '', 16px, 16px, 300, '', '', inline-block);
+          margin-bottom: 5px;
+          width: 100% !important;
+          input {
+            margin-top: 10px;
+            padding-left: 15px;
+            width: 100% !important;
+          }
+        }
+      }
+      p {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .botao-efetuar-login {
+        @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
+        cursor: pointer;
+        height: 40px;
+        margin-top: 25px;
+        padding: 13px 0;
+        &:before {
+          @include text(white, '', 14px, 14px, 500, uppercase, center, inline-block);
+          content: 'Login';
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+
+    .Cadastro {
+      display: inline-block;
+      padding: 15px;
+      vertical-align: top;
+      width: 50%;
+      @media(max-width: 767px) {
+        text-align: center;
+        width: 100%;
+      }
+      form {
+        fieldset {
+          p, label {
+            display: none;
+            input {
+              display: none;
+            }
+          }
+          .cadastro-desc {
+            @include text(#333, '', 16px, 16px, 300, '', '', inline-block);
+            margin-bottom: 5px;
+            padding: 0;
+            width: 100% !important;
+          }
+          .botao-novo-cadastro {
+            @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
+            cursor: pointer;
+            height: 40px;
+            margin-top: 25px;
+            padding: 13px 0;
+            @media (min-width: 768px) and (max-width: 991px) {
+              margin-top: 37px;
+            }
+            &:before {
+              @include text(white, '', 14px, 14px, 500, uppercase, center, inline-block);
+              content: 'Cadastrar';
+            }
+            img {
+              display: none;
+            }
+            @media (max-width: 700px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

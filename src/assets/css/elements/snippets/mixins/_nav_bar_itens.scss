@@ -1,0 +1,51 @@
+// ===== Nav Bar Qty Itens
+@mixin colums(
+	$xs:					 '',
+	$sm:					 '',
+	$md:					 '',
+	$lg:					 ''
+){
+	@if $xs	!= '' {
+		@media (max-width:$screen-phone){
+			width: getPercent( $xs);
+			display: none;
+			#{controlNavBar( $xs )}{
+				display: block;
+			}
+		}
+		@media (min-width:$screen-phone){
+			width: getPercent( $xs);
+			display: none;
+			#{controlNavBar( $xs )}{
+				display: block;
+			}
+		}
+	}
+	@if $sm	!= '' {
+		@media (min-width:$screen-tablet){
+			width: getPercent( $sm);
+			display: none;
+			#{controlNavBar( $sm )}{
+				display: block;
+			}
+		}
+	}
+	@if $md	!= '' {
+		@media (min-width:$screen-desktop){
+			width: getPercent( $md);
+			display: none;
+			#{controlNavBar( $md )}{
+				display: block;
+			}
+		}
+	}
+	@if $lg	!= '' {
+		@media (min-width:$screen-lg-desktop){
+			width: getPercent( $lg);
+			display: none;
+			#{controlNavBar( $lg )}{
+				display: block;
+			}
+		}
+	}
+}

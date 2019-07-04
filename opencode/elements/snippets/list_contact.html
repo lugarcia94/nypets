@@ -1,0 +1,37 @@
+<ul class="contact__list">
+    {% if settings.smartphone %}
+    <li class="contact__item contact__item--telephone">
+        <a href="tel:55{{ settings.smartphoneLink }}" class="contact__link">
+            <svg class="contact__item-icon icon--celphone"><use xlink:href="#icon-celphone"></use></svg>
+            {{ settings.smartphone }}
+        </a>
+    </li>
+    {% endif %}
+
+    {% if settings.whatsapp %}
+    <li class="contact__item contact__item--whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=55{{ settings.whatsappLink }}" class="contact__link" target="_blank">
+            <svg class="contact__item-icon icon--whatsapp"><use xlink:href="#icon-whatsapp"></use></svg>
+            {{ settings.whatsapp }}
+        </a>
+    </li>
+    {% endif %}
+
+    {% if settings.skype %}
+    <li class="contact__item contact__item--skype">
+        <a href="skype:{{ settings.skypeUsername }}?chat" class="contact__link contact__link--skype">
+            <svg class="contact__item-icon icon--skype"><use xlink:href="#icon-skype"></use></svg>
+            {{ settings.skype }}
+        </a>
+    </li>
+    {% endif %}
+    
+    {% if settings.email %}
+    <li class="contact__item contact__item--email">
+        <a href="mailto:{{ settings.email }}" class="contact__link">
+            <svg class="contact__item-icon icon--email"><use xlink:href="#icon-email"></use></svg>
+            {{ settings.email }}
+        </a>
+    </li>
+    {% endif %}
+</ul>

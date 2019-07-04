@@ -1,0 +1,29 @@
+.infinite {
+    &__button {
+        display         : flex;
+        
+        justify-content : center;
+        align-items     : center;
+
+        width           : 100%;
+        height          : 40px;
+
+        background      : rgba(0, 0, 0, .5);
+        color           : #fff;
+
+        transition      : all .2s ease-in-out;
+    }
+}
+
+[data-infinite=true] {
+    .paginates {
+        display: none;
+    }
+}
+
+[data-infinite-auto=true] {
+    .infinite__button:not(.infinite__button--loading) {
+        opacity: 0;
+        visibility: hidden;
+    }   
+}

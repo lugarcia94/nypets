@@ -1,0 +1,859 @@
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/css/uikit.min.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.23/js/uikit.min.js"></script>
+
+<style>.ls-md-space.col-md-8{background:#eee;width:100%;margin:0 0 30px;padding:15px}.ls-md-space.col-md-8 fieldset{margin:0}@media(min-width:1200px){.uk-card-body{padding:30px}}.input-ghost-val,.row.line1 .col-md-4{display:none}.style-input{border-color:transparent!important;font-size:16px!important;box-shadow:none!important}.uk-form-blank.input-ghost:focus{border-color:#e5e5e5!important}.material-icons{display:flex!important;justify-content:center}@media(min-width:992px){.brand__form{align-items:flex-end;display:flex;height:70px}.brand__form>div{order:2;margin-left:10px}.input-brand{order:1}}.brand__remove{background:#e84b3c;border-radius:5px;font-size:13px;height:34px;line-height:34px;margin:5px 0 0 8px;padding:0 10px;text-transform:none;}</style>
+
+<fieldset>
+    <input type="hidden" name="extension_id">
+
+    <div uk-grid class="uk-grid-match">
+        <div class="uk-width-1-2@m">
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                <h3 class="uk-card-title">Contato</h3>
+
+                <div class="contact__list uk-column-1-2">
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Telefone: n&#250;mero exibido na loja</legend>
+                        <input type="text" class="uk-input" name="telephone" placeholder="Ex.: (00) 1234-5678">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Telefone: somente n&#250;meros</legend>
+                        <input type="text" class="uk-input" name="telephoneLink" placeholder="Ex.: 0012345678">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Celular: n&#250;mero exibido na loja</legend>
+                        <input type="text" class="uk-input" name="smartphone" placeholder="Ex.: (00) 91234-5678">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Celular: somente n&#250;meros</legend>
+                        <input type="text" class="uk-input" name="smartphoneLink" placeholder="Ex.: 00912345678">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">E-mail</legend>
+                        <input type="text" class="uk-input" name="email" placeholder="Ex.: contato@beautyauaha.com.br">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Whatsapp: n&#250;mero exibido na loja</legend>
+                        <input type="text" class="uk-input" name="whatsapp" placeholder="Ex.: (00) 91234-5678">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Whatsapp: somente n&#250;meros</legend>
+                        <input type="text" class="uk-input" name="whatsappLink" placeholder="Ex.: 00912345678">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Skype: nome exibido na loja</legend>
+                        <input type="text" class="uk-input" name="skype" placeholder="Ex.: silmarfa">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Skype: Username</legend>
+                        <input type="text" class="uk-input" name="skypeUsername" placeholder="Ex.: silmarfa">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Hor&#225;rio de atendimento</legend>
+                        <input type="text" class="uk-input" name="schedule" placeholder="Ex.: Seg. a Sex. das 9 ?s 18h">
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                <h3 class="uk-card-title">Redes sociais</h3>
+
+                <div class="social-media__list">
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Facebook</legend>
+                        <input type="text" class="uk-input" name="facebook" placeholder="Ex.: agencia.auaha">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Instagram</legend>
+                        <input type="text" class="uk-input" name="instagram" placeholder="Ex.: agenciaauaha">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Instagram: token</legend>
+                        <p class="uk-margin-small">O token pode ser gerado a partir desta ferramenta: http://instagram.pixelunion.net/</p>
+                        <input type="text" class="uk-input" name="instagramToken" placeholder="Ex.: 2714372314.1677ed0.8d9df5c01eb245bd9d1a67b654abdd36">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Instagram: id de usu&#225;rio</legend>
+                        <p class="uk-margin-small">O id &#233; o primeiro conjunto de n&#250;meros antes do ponto do token gerado anteriormente.</p>
+                        <input type="text" class="uk-input" name="instagramUserId" placeholder="Ex.: 2714372314">
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                <h3 class="uk-card-title">Topo</h3>
+
+                <div class="social-media__list">
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Informa&#231;&#227;o esquerda</legend>
+                        <input type="text" class="uk-input" name="topLeft" placeholder="Ex.: Frete gr&#225;tis - sudeste a partir de R&#36; 150 e sul a partir de R&#36;180">
+                    </div>
+
+                    <div class="uk-margin-bottom">
+                        <legend class="uk-h6 uk-margin-small">Informa&#231;&#227;o direita</legend>
+                        <input type="text" class="uk-input" name="topRight" placeholder="Ex.: Toda a loja com at&#233; 50% de desconto no pagamento &#224; vista.">
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                <h3 class="uk-card-title">Informa&#231;&#245;es gerais</h3>
+
+                <h4 class="uk-h5 uk-margin-small">Imagem Lightbox</h4>
+                <p class="uk-margin-small">A imagem pode ser otimizada em: https://kraken.io/web-interface</p>
+                <div uk-form-custom="target: true">
+                    <input type="file" name="light">
+                    <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                    <button type="button" class="uk-button uk-button-default" tabindex="-1">Selecionar</button>
+                </div><hr>
+
+                <h4 class="uk-h5 uk-margin-small">Logo</h4>
+                <p class="uk-margin-small">A imagem pode ser otimizada em: https://kraken.io/web-interface</p>
+                <div uk-form-custom="target: true">
+                    <input type="file" name="logo">
+                    <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                    <button type="button" class="uk-button uk-button-default" tabindex="-1">Selecionar</button>
+                </div><hr>
+
+                <h4 class="uk-h5 uk-margin-small">Favicon (&#237;cone da loja)</h4>
+                <p class="uk-margin-small">A imagem deve ser .png e ter dimens&#245;es 16x16 ou 32x32.</p>
+                <div uk-form-custom="target: true">
+                    <input type="file" name="favicon">
+                    <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                    <button type="button" class="uk-button uk-button-default" tabindex="-1">Selecionar</button>
+                </div><hr>
+
+                <h4 class="uk-h5 uk-margin-small">Categoria de Marcas</h4>
+                <p class="uk-margin-small">Insira apenas o id da categoria.</p>
+                <div class="uk-margin-bottom">
+                    <input type="text" class="uk-input" name="categoryBrands" placeholder="Ex.: 90">
+                </div><hr>
+
+                <h4 class="uk-h5 uk-margin-small">Copyright</h4>
+                <p class="uk-margin-small">A mensagem de copyright exibida no rodap&#233; deve exibir o nome e o CNPJ da empresa.</p>
+                <textarea class="uk-textarea" name="copyright" rows="3"></textarea>
+            </div>
+        </div>
+        
+        <div class="uk-width-1-2@m">
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                <h3 class="uk-card-title">Carrossel de informa&#231;&#245;es</h3>
+
+                <div uk-grid>
+                    <div class="information__list--title uk-width-1-2@m">
+                        <h4 class="uk-h5 uk-margin-small">Texto prim&#225;rio</h4>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon local_shipping">local_shipping</i>
+                            <input type="text" class="uk-input" name="informationTitle01" placeholder="Ex.: Frete gr&#225;tis a partir de">
+                        </div>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon credit_card">credit_card</i>
+                            <input type="text" class="uk-input" name="informationTitle02" placeholder="Ex.: Parcele">
+                        </div>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon security">security</i>
+                            <input type="text" class="uk-input" name="informationTitle03" placeholder="Ex.: Compra">
+                        </div>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon map">map</i>
+                            <input type="text" class="uk-input" name="informationTitle04" placeholder="Ex.: Entregas para">
+                        </div>
+                    </div>
+
+                    <div class="information__list--subtitle uk-width-1-2@m">
+                        <h4 class="uk-h5 uk-margin-small">Texto secund&#225;rio</h4>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon local_shipping">local_shipping</i>
+                            <input type="text" class="uk-input" name="informationSubtitle01" placeholder="Ex.: 150 reais confira condi&#231;&#245;es">
+                        </div>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon credit_card">credit_card</i>
+                            <input type="text" class="uk-input" name="informationSubtitle02" placeholder="Ex.: 3X sem juros">
+                        </div>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon security">security</i>
+                            <input type="text" class="uk-input" name="informationSubtitle03" placeholder="Ex.: 100% segura">
+                        </div>
+
+                        <div class="uk-inline uk-margin-bottom">
+                            <i class="material-icons uk-form-icon map">map</i>
+                            <input type="text" class="uk-input" name="informationSubtitle04" placeholder="Ex.: todo o Brasil">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                <h3 class="uk-card-title">Carrossel de marcas</h3>
+                
+                <div uk-grid>
+                    <div class="uk-width-1-2@m">
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage01" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink01" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+                        
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage02" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink02" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage03" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink03" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage04" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink04" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage05" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink05" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage06" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink06" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage07" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink07" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage08" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink08" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div>
+                    </div>
+
+                    <div class="uk-width-1-2@m">
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage09" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink09" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage10" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink10" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage11" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink11" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage12" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink12" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage13" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink13" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage14" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink14" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage15" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink15" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div><hr>
+
+                        <div class="uk-margin-bottom">
+                            <div uk-form-custom="target: true" class="brand__form">
+                                <input type="file" name="brandImage16" class="input-brand">
+                                <input type="text" class="uk-input uk-form-width-medium uk-margin-small" placeholder="Selecione um arquivo" disabled>
+                            </div>
+
+                            <div class="uk-inline">
+                                <i class="material-icons uk-form-icon link">link</i>
+                                <input type="text" class="uk-input input-ghost" name="brandLink16" placeholder="Ex.: loreal-paris">
+                            </div>
+                            
+                            <button type="button" class="uk-button uk-button-danger brand__remove">Remover</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                    <h3 class="uk-card-title">V&#237;deo Home</h3>
+                    
+                    <div uk-grid>
+                        <div class="uk-width-1@m">
+                            <div class="footer__list--title">
+                                <h4 class="uk-h5 uk-margin-small">T&#237;tulo do v&#237;deo / ID do v&#237;deo</h4>
+    
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoTitle01" placeholder="Ex.: T&#237;tulo do V&#237;deo">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]title">
+                                    </div>
+    
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon link">link</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoLink01" placeholder="Ex.: XK0w34DGBQY">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]id">
+                                    </div>
+                                </div><hr>
+    
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoTitle02" placeholder="Ex.: T&#237;tulo do V&#237;deo">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]title">
+                                    </div>
+    
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon link">link</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoLink02" placeholder="Ex.: XK0w34DGBQY">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]id">
+                                    </div>
+                                </div><hr>
+    
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoTitle03" placeholder="Ex.: T&#237;tulo do V&#237;deo">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]title">
+                                    </div>
+    
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon link">link</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoLink03" placeholder="Ex.: XK0w34DGBQY">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]id">
+                                    </div>
+                                </div><hr>
+    
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoTitle04" placeholder="Ex.: T&#237;tulo do V&#237;deo">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]title">
+                                    </div>
+    
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon link">link</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoLink04" placeholder="Ex.: XK0w34DGBQY">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]id">
+                                    </div>
+                                </div><hr>
+    
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoTitle05" placeholder="Ex.: T&#237;tulo do V&#237;deo">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]title">
+                                    </div>
+    
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon link">link</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoLink05" placeholder="Ex.: XK0w34DGBQY">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]id">
+                                    </div>
+                                </div><hr>
+    
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoTitle06" placeholder="Ex.: T&#237;tulo do V&#237;deo">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]title">
+                                    </div>
+    
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon link">link</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoLink06" placeholder="Ex.: XK0w34DGBQY">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]id">
+                                    </div>
+                                </div><hr>
+    
+                                <div class="uk-margin-bottom">
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoTitle07" placeholder="Ex.: T&#237;tulo do V&#237;deo">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]title">
+                                    </div>
+    
+                                    <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                        <i class="material-icons uk-form-icon link">link</i>
+                                        <input type="text" class="uk-input input-ghost" name="videoLink07" placeholder="Ex.: XK0w34DGBQY">
+                                        <input type="text" class="uk-input input-ghost-val" name="video[]id">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="uk-card uk-card-default uk-card-body uk-margin">
+                <h3 class="uk-card-title">Links do rodap&#233;</h3>
+                
+                <div uk-grid>
+                    <div class="uk-width-1-2@m">
+                        <div class="footer__list--title">
+                            <h4 class="uk-h5 uk-margin-small">Institucional</h4>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalName01" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalLink01" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalName02" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalLink02" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalName03" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalLink03" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalName04" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalLink04" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalName05" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalLink05" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalName06" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalLink06" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalName07" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="instutitionalLink07" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="institutional[]url">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="uk-width-1-2@m">
+                        <div class="footer__list--title">
+                            <h4 class="uk-h5 uk-margin-small">Ajuda e Suporte</h4>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpName01" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpLink01" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpName02" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpLink02" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpName03" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpLink03" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpName04" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpLink04" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpName05" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpLink05" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpName06" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpLink06" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]url">
+                                </div>
+                            </div><hr>
+
+                            <div class="uk-margin-bottom">
+                                <div class="uk-inline uk-margin-bottom group-input-ghost">
+                                    <i class="material-icons uk-form-icon text_fields">text_fields</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpName07" placeholder="Ex.: Como comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]name">
+                                </div>
+
+                                <div class="uk-inline group-input-ghost">
+                                    <i class="material-icons uk-form-icon link">link</i>
+                                    <input type="text" class="uk-input input-ghost" name="helpLink07" placeholder="Ex.: como-comprar">
+                                    <input type="text" class="uk-input input-ghost-val" name="help[]url">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<div class="uk-card uk-card-default uk-card-body uk-margin">
+    <h3 class="uk-card-title">Vitrines</h3>
+
+    <div uk-grid>
+        <div class="uk-width-1-2@m">
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">T&#237;tulo</legend>
+                <input type="text" class="uk-input" name="showcaseTitle01">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Subt&#237;tulo</legend>
+                <input type="text" class="uk-input" name="showcaseSubtitle01">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Categoria</legend>
+                <input type="text" class="uk-input" name="showcaseCategory01">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Quantidade</legend>
+                <input type="text" class="uk-input" name="showcaseQuantity01">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Filtro</legend>
+                <select name="showcaseFilter01" class="uk-select">
+                    <option value="available">Dispon&#237;vel</option>
+                    <option value="featured">Destaque</option>
+                    <option value="new">Lan&#231;amento</option>
+                    <option value="promotion">Promo&#231;&#227;o</option>
+                    <option value="free_shipping">Frete Gr&#225;tis</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="uk-width-1-2@m">
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">T&#237;tulo</legend>
+                <input type="text" class="uk-input" name="showcaseTitle02">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Subt&#237;tulo</legend>
+                <input type="text" class="uk-input" name="showcaseSubtitle02">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Categoria</legend>
+                <input type="text" class="uk-input" name="showcaseCategory02">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Quantidade</legend>
+                <input type="text" class="uk-input" name="showcaseQuantity02">
+            </div>
+
+            <div class="uk-margin-bottom">
+                <legend class="uk-h6 uk-margin-small">Filtro</legend>
+                <select name="showcaseFilter02" class="uk-select">
+                    <option value="available">Dispon&#237;vel</option>
+                    <option value="featured">Destaque</option>
+                    <option value="new">Lan&#231;amento</option>
+                    <option value="promotion">Promo&#231;&#227;o</option>
+                    <option value="free_shipping">Frete Gr&#225;tis</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function($){
+        $('.ls-no-padding-left.ls-no-padding-right.ls-no-padding-top.ls-md-space.col-md-12 .row').each(function(i){
+            $(this).addClass('line'+i);
+        });
+
+        // Montar Json separado com Fake Input Ghost
+        $('.input-ghost').each(function(i){
+            $(this).closest('.group-input-ghost').find('.input-ghost-val').val($(this).val());
+            $(this).on("change paste keyup", function() {
+                $(this).closest('.group-input-ghost').find('.input-ghost-val').val($(this).val());
+            });
+        });
+    }(jQuery));
+
+    jQuery('.brand__remove').click(function(){
+        jQuery(this).closest('.uk-margin-bottom').find('.brand__form input[id*="brandImage"]').attr('value','');
+    });
+</script>

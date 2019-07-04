@@ -1,0 +1,26 @@
+<h3 class="home-videos__title">V&#237;deos New York Pets</h3>
+<div class="home-videos__list">
+    <div class="home-videos__item">
+        <div class="video-youtube__first" data-code="{{ settings.video[0].id }}">
+            <iframe src="https://www.youtube.com/embed/{{ settings.video[0].id }}?playlist={{ settings.video[0].id }};autoplay=1&controls=1&showinfo=0&rel=0&loop=0&modestbranding=0&wmode=transparent&enablejsapi=0&mute=1&color=white" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" class="style-scope yt-sharing-embed-renderer"></iframe>
+            <p class="video-youtube__title">{{ settings.video[0].title }}</p>
+        </div>
+        <div class="video-youtube__list">
+            {% for link in settings.video %}
+                {% if link.id != "" and link.title != "" %}
+                {# <span>Id do video= {{ link.id }}, titulo do video= {{ link.title }}</span>#}
+                <div class="video-youtube__image" data-code="{{ link.id }}" data-title="{{ link.title }}">
+                    <div class="video-youtube__image--inner">
+                        <img src="https://img.youtube.com/vi/{{ link.id }}/0.jpg">
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+

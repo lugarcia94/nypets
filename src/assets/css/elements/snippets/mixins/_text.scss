@@ -1,0 +1,96 @@
+@mixin text(
+	$color          		: 		$text-color,
+	$font-family         	: 		$text-font-family,
+	$font-size           	: 		$text-font-size,
+	$line-height    		: 		$text-line-height,
+	$font-weight         	: 		$text-font-weight,
+	$text-transform 		: 		$text-text-transform,
+	$text-align     		: 		'',
+	$display        		: 		''
+){
+	@if $color         		!= '' 	{  color: $color; 						}
+	@if $font-family   		!= '' 	{  font-family: $font-family;  			}
+	@if $font-size     		!= '' 	{  font-size: $font-size;  				}
+	@if $line-height   		!= '' 	{  line-height: $line-height; 			}
+	@if $font-weight   		!= '' 	{  font-weight: $font-weight; 			}
+	@if $text-transform		!= '' 	{  text-transform: $text-transform; 	}
+	@if $text-align    		!= '' 	{  text-align: $text-align;  			}
+	@if $display       		!= '' 	{  display: $display;  					}
+}
+@mixin link(
+    $color          		: 		$link-color,
+    $background				:		$link-background,
+	$font-family         	: 		$link-font-family,
+	$font-size           	: 		$link-font-size,
+	$line-height    		: 		$link-line-height,
+	$font-weight         	: 		$link-font-weight,
+	$text-transform 		: 		$link-text-transform,
+	$text-decoration		: 		$link-decoration,
+	$text-align     		: 		$link-text-align,
+	$display        		: 		''
+){
+  @include text($color, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-align, $display);
+  @if $background 			!= '' 	{  background: $background; 			}
+  @if $text-decoration 		!= '' 	{  text-decoration: $text-decoration; 	}
+}
+
+
+@mixin link-action(
+	$action         		: 		'',
+	$tag					:		'',
+  	$color          		: 		$link-hover-color,
+    $background				:		$link-hover-background,
+	$font-family         	: 		$link-hover-font-family,
+	$font-size           	: 		$link-hover-font-size,
+	$line-height    		: 		$link-hover-line-height,
+	$font-weight         	: 		$link-hover-font-weight,
+	$text-transform 		: 		$link-hover-text-transform,
+	$text-decoration		: 		$link-hover-decoration,
+	$text-align     		: 		$link-hover-text-align,
+	$display        		: 		''
+
+){
+	@if ( $action == '' ) {
+	  	&:hover,
+		&:focus,
+		&:active{
+			@if ( $tag == '' ) {
+			  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+			}@else{
+				#{$tag}{
+				  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+				}
+			}
+		}
+	} @else if ( $action == 'hover' ) {
+		&:#{$action}{
+			@if ( $tag == '' ) {
+			  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+			}@else{
+				#{$tag}{
+				  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+				}
+			}
+		}
+	} @else if ( $action == 'focus' ){
+		&:#{$action}{
+			@if ( $tag == '' ) {
+			  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+			}@else{
+				#{$tag}{
+				  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+				}
+			}
+		}
+	} @else if ( $action == 'active' ){
+		&:#{$action}{
+			@if ( $tag == '' ) {
+			  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+			}@else{
+				#{$tag}{
+				  @include link($color, $background, $font-family, $font-size, $line-height, $font-weight, $text-transform, $text-decoration, $text-align, $display);
+				}
+			}
+		}
+	}
+}

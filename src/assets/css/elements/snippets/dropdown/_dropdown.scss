@@ -1,0 +1,78 @@
+// ===== Dropdown 01
+// Dropdown
+$dropdown-box-shadow:					0 6px 12px rgba(#000, 1.76/10);
+$dropdown-border-width:					2px 0 0 0;
+$dropdown-border-style:					solid;
+$dropdown-border-color:					'';
+$dropdown-border-radius:				$border-radius;
+$dropdown-padding:						5px 0;
+$dropdown-padding-link:					7px 15px;
+$dropdown-text-align:					left;
+$dropdown-width:						160px;
+
+@mixin dropdown01(
+	$box-shadow: 			    $dropdown-box-shadow,
+	$border-width:				$dropdown-border-width,
+	$border-style:      		$dropdown-border-style,
+	$border-color:				$dropdown-border-color,
+	$border-radius: 			$dropdown-border-radius,
+	$padding: 					$dropdown-padding,
+	$text-align: 				$dropdown-text-align,
+	$width: 					$dropdown-width,
+
+	//Efeito
+	$scale: 0,
+	$scale-hover: 1,
+	$rotate: 0deg,
+	$rotate-hover: 0deg,
+	$transition: all 300ms cubic-bezier(0.6,-0.28, 0.56, 0.78) 0s
+
+){
+	.dropdown{
+		.dropdown-switcher{
+			border-width: $border-width;
+			border-style: $border-style;
+			border-color: $border-color;
+			@include border-radius($border-radius);
+			@include box-shadow($box-shadow);
+			@include scale($scale);
+			@include rotate($rotate);
+			
+			right:50%;
+			min-width: $width;
+			opacity:0;
+			padding: $padding;
+			position:absolute;
+
+			top:100%;
+			visibility:hidden;
+			z-index:35;
+			@include transition($transition);
+			li{
+				>a{
+					display: block;
+					padding:$dropdown-padding-link;
+					text-align: $text-align;
+				}
+			}
+		}
+
+		a{
+			display: block;
+			width: 100%;
+		}
+
+	    &:hover{
+	    	.dropdown-switcher {
+				background-color: #ffffff;
+				border-color: $cor01;
+				opacity: 1;
+				visibility: visible;
+			    @include scale($scale-hover);
+			    @include rotate($rotate-hover);
+
+			}
+		}
+	}
+}
+

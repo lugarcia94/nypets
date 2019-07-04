@@ -1,0 +1,55 @@
+<div class="header__categories" id="nav_bar">
+    <ul class="category__list--one">
+        {% for category in categories %}
+        <li class="category--{{ category.id }} category__item--one{% if category.children %} category__label{% endif %}{% if category.id == settings.categoryBrands %} category__brands{% endif %}">
+            <a href="{{ category.link }}" class="category__link--one">{{ category.name }}</a>
+
+            {% if category.id == settings.categoryBrands %}
+            <div class="category__dropdown brands">
+                {% element 'snippets/list_brands' %}
+                
+                {% if category.images and not utils.is_mobile %}
+                <figure class="category__image">
+                    <img src="{{ category.images[0] }}" alt="{{ category.name }}">
+                </figure>
+                {% endif %}
+            </div>
+            {% endif %}
+            
+            {% if category.children %}
+            <span class="hidden-lg category__button">
+                <svg class="category__button-icon icon--down"><use xlink:href="#icon-arrow-down"></use></svg>
+            </span>
+
+            <div class="category__dropdown">
+                <ul class="category__list--two">
+                    {% for child in category.children %}
+                    <li class="category--{{ child.id }} category__item--two {% if child.children %} category__father{% endif %}">
+                        <a href="{{ child.link }}" class="category__link--two">{{ child.name }}</a>
+
+                        {% if child.children %}
+                        <ul class="category__list--three">
+                            {% for grandchild in child.children %}
+                            <li class="category--{{ grandchild.id }} category__item--three">
+                                <a href="{{ grandchild.link }}" class="category__link--three">{{ grandchild.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+
+                    {% endfor %}
+                </ul>
+
+                {% if category.images and not utils.is_mobile %}
+                <figure class="category__image">
+                    <img src="{{ category.images[0] }}" alt="{{ category.name }}">
+                </figure>
+                {% endif %}
+            </div>
+            {% endif %}
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>

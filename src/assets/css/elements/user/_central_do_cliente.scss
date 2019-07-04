@@ -1,0 +1,438 @@
+// P�gina de Central do CLiente
+.page-central_cliente {
+  .central-saudacao {
+    h2 {
+      margin-top: 10px;
+    }
+  }
+
+  .central-menu {
+    font-size: 0;
+    br {
+      display: none;
+    }
+    h2 {
+      @include text('', '', 12px, '', 400, '');
+      margin: 0;
+    }
+    div {
+      display: inline-block;
+      min-height: 115px;
+      padding: 15px;
+      text-align: center;
+      vertical-align: top;
+      width: 25%;
+
+      @media (max-width: 576px) {
+        width: 50%;
+      }
+
+      a {
+        display: block;
+        padding: 7px 0;
+        border: 2px solid transparent;
+        transition: border .25s ease;
+
+        &:hover {
+          border-color: $cor01;
+        }
+      }
+
+      img {
+        max-height: 64px;
+      }
+
+      &[style="clear:both"] {
+        border-bottom: none;
+      }
+
+      &.icoPai {
+        width: 100%;
+        min-height: 0;
+        border-bottom: 1px solid $cor01;
+
+        .color {
+          font-weight: 700;
+          font-size: 26px;
+          color: $cor01;
+        }
+
+        img {
+          display: none;
+        }
+      }
+
+      &.icoFilho {
+        p {
+          height: 24px;
+          margin-top: 10px;
+          font-size: 14px;
+        }
+      }
+
+      &.icoFilho:nth-of-type(12) {
+        display: none;
+      }
+    }
+  }
+
+  .prodBox {
+    display: none;
+  }
+}
+
+// P�gina de Meus Pedidos
+.page-central_anteriores {
+  table.Pedidos {
+    width: 100%;
+
+    td {
+      text-align: left;
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h3.color {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+    }
+  }
+}
+
+// P�gina de Detalhes do Pedido
+.page-central_detalhe_pedido {
+
+}
+
+// P�gina de Troca e Devolu��o
+.page-central_troca,
+.page-central_gera_troca {
+  .main {
+    input {
+      width: auto;
+      height: auto;
+    }
+
+    .board > table tr {
+      border-bottom: none;
+    }
+
+    .button-submit {
+      padding: 15px;
+      background: $cor03;
+      border: none;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #FFF;
+    }
+  }
+}
+
+.page-central_gera_troca {
+  .main {
+    tbody tr {
+      &:first-child th:nth-child(n+1),
+      & td:nth-child(n+1) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+// P�gina de Alterar Senha
+.page-central_senha {
+  [type=password] {
+    margin-top: 5px;
+    padding: 0 15px;
+    border-radius: 4px;
+  }
+
+  .button-submit {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 35px;
+    text-align: center;
+    background: $cor01;
+    border: solid darken($cor01, 30%);
+    border-width: 1px 1px 4px 1px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #FFF;
+    height: 50px;
+    line-height: 46px;
+  }
+
+  @media screen and (max-width: 576px) {
+    [type=password],
+    .button-submit {
+      width: 100%;
+    }
+
+    label {
+      display: block;
+    }
+  }
+}
+
+// P�gina de Detalhes do Pedido
+.page-central_detalhe_pedido {
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .TimeLine5 {
+    margin-bottom: 30px;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: -3px;
+      padding: 20px;
+      width: 20%;
+      height: 105px;
+      border: solid #888;
+      border-width: 3px 0 0 0;
+      font-size: 16px;
+      line-height: normal;
+      text-align: center;
+      text-transform: uppercase;
+      color: #555;
+
+      &.ok {
+        border-color: #9eca17;
+        color: #9eca17;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      li {
+        margin-top: -1px;
+        padding: 15px;
+        width: 100%;
+        height: auto;
+        border-width: 1px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .TimeLine5 ~ p {
+    font-size: 14px;
+
+    span {
+      font-size: inherit;
+    }
+  }
+
+  .board {
+    font-size: 13px;
+    line-height: normal;
+
+    > .red {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: normal;
+    }
+  }
+
+  table {
+    tr, td {
+      text-align: left;
+    }
+
+    @media screen and (max-width: 767px) {
+      td:before {
+        display: none;
+      }
+
+      td,
+      tr td:first-child,
+      tr th:first-child {
+        padding: 8px;
+      }
+
+      tr {
+        background: #FFF !important;
+      }
+
+      tr td:nth-of-type(3):before {
+        content: 'Quantidade: ';
+        display: inline;
+      }
+
+      tr td:nth-of-type(4):before {
+        content: 'Valor unitario: ';
+        display: inline;
+      }
+
+      tr td:nth-of-type(5) {
+        &:before {
+          content: 'Valor total: ';
+          display: inline;
+        }
+
+        h3 {
+          display: inline;
+        }
+      }
+
+      tbody tr:nth-of-type(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+// P�gina de Coment�rios
+.page-central_comentarios {
+
+  .editComment {
+    li {
+      display: flex;
+
+      > a {
+        display: block;
+        vertical-align: middle;
+      }
+
+      > h3 {
+        display: block;
+        flex: 1 1 auto;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0 20px;
+        font-size: 16px;
+      }
+
+      > div {
+        display: block;
+        flex: 1 1 auto;
+        margin: 0;
+        padding: 0 20px;
+
+        .btsComment a {
+          display: inline-block;
+          vertical-align: middle;
+          margin-bottom: 15px;
+          padding: 0 16px;
+          text-align: center;
+          background: $cor01;
+          border: solid darken($cor01, 50%);
+          border-width: 1px 1px 4px 1px;
+          border-radius: 4px;
+          font-weight: 700;
+          font-size: 13px;
+          text-transform: uppercase;
+          color: #FFF;
+          height: 30px;
+          line-height: 26px;
+        }
+
+        .ranking {
+          .star0,
+          .star1,
+          .star2,
+          .star3,
+          .star4,
+          .star5 {
+            float: left;
+            height: 15px;
+            width: 96px;
+            margin-right: 10px;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAAAPCAMAAACMV5AuAAAB2lBMVEXS0tL/vQD/vgD/vwD/wAD/wQD/wwD/xAD/xQD/xgD/xwD/yQD/ygD/ywD/zwD/0QD/0wD/3gD/4ST/4zL/92///T3//j7////S0tL/zADS0tL/1AD/wQD/wwDS0tL/zgD/6Dz/wgD/7FH/xQD/wAD/wAD/9zH/wADS0tL/wAD/wAD/wAD/wAD/vQD/vwD/vgD/xQD/vwD/vgD/vgD/xwD/vgD/vgDS0tLS0tL/vwDS0tL/vwD/wgD/vwD/vgD/wADS0tLS0tLS0tL/zAD/vgDS0tLS0tLS0tL/vwDS0tLS0tLS0tL/ugDS0tL/1QD/vwD/wAD/vwD/yQDS0tL/zADS0tLS0tL/wQDS0tL/xAD/vAD/wgD/yQD/xADS0tL/wgD/xQDS0tL/vwD/vAD/vgD/vwDS0tL/vwDS0tL/vwD/wQD/wQD/vgD/vwDS0tLS0tL/vwD/vwD/vQD/vwDS0tL/vgD/vwDS0tL/vgD/vgD/vgD/vgD/vwD/vgDS0tLS0tL/vgD/vgD/vwDS0tL/ugD/wQD/vwD/ugD/vgDS0tL/wADS0tL/vwDS0tL/vgD/vAD/vQD/vgD/vgDS0tL/vgD/vQD/vgD/vwDS0tL/vADS0tLS0tL/vQD/vgCjCk/FAAAAm3RSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBwgKCwwNDQ4PEBITFRUdHiIjJCUpLS8xNDU3Ojw9R0pKS0xMTU9RUlRVVlpeX2BgZWZoaGlwcXF0dXp6e35+gIGCiYqLjI6UlZaXmp6foKGjo6anrK2usLS3ury8vcHBwsfIycrS09XY2dvc3uLk5ufo6ezt7vDz8/b5+fv7+/z9/kTGPW0AAAHDSURBVHgBrdLXl4tBGMfxn5l52V2xOq/F6ixWL6uLEL13QojeCyF6EUVEFFEi887/6uExm5u5mjPfi5w5n5vn/E5eKNWeGpxaen1hR3vHIKHG/suF/gYOfX32FdqUiqJoypFPeydEkbQjXOhv4OJnz2NwoU0pMUDMe2zu9yoh7AgX+hu4bVpvBxfalJJCrvtmvq6JWiNc6G98qLuidaWb36Ftxuz5i9deM8ZcXb98yYI5PMKB/sZHewqaKvTgb6Ft3+Vb9159p5u/3j55cOc4j3ChvyGdL9b0/2rFfBqh7dznxNiSDyd4hAv9DavqfJCrr0Bom5X72H/03cGZPMKF/gZkGq2bjQ1AaGubuvu14V7unDSGR7jQ3wBsadqbzc0AQlvbqMm5H3zz1MRho3mEC/0N1CF79ACo0DZ05Ij9v/kDPpbqHM4jXOhvoLL2aBZUaOscMu50wjevTBuoeIQL/Q3UUXv0MKjQplTvbfPz4Zm7X5JHy4TgES70N1CX6F61Sj8XQIU2KVc+fX9+kZx78s2LrVLyCBf6G6iSLu/q6tpR1iVQoU3K1Rf3TJdCjd94dpP9J1zob6BuZGJQceYmqMD2B6R219Zqw5vuAAAAAElFTkSuQmCC") no-repeat;
+          }
+          .star1 {
+            background-position: -80px 0
+          }
+          .star2 {
+            background-position: -60px 0
+          }
+          .star3 {
+            background-position: -40px 0
+          }
+          .star4 {
+            background-position: -20px 0
+          }
+          .star5 {
+            background-position: 0 0
+          }
+        }
+
+        p {
+          display: block;
+          margin-top: 20px;
+          padding: 6px;
+          background: #eee;
+          font-size: 13px;
+          line-height: normal;
+        }
+
+        div:last-child {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+}
+
+// P�gina de Lista de Espera
+.page-central_lista_espera {
+
+  .editComment {
+    li .relativity {
+      display: flex;
+
+      > a {
+        display: block;
+        vertical-align: middle;
+      }
+
+      > h3 {
+        display: block;
+        flex: 1 1 auto;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0 20px;
+        font-size: 16px;
+      }
+
+      > div {
+        display: block;
+        flex: 1 1 auto;
+        margin: 0;
+        padding: 0 20px;
+
+        a {
+          display: inline-block;
+          vertical-align: middle;
+          margin-bottom: 15px;
+          padding: 0 16px;
+          text-align: center;
+          background: $cor01;
+          border: solid darken($cor01, 50%);
+          border-width: 1px 1px 4px 1px;
+          border-radius: 4px;
+          font-weight: 700;
+          font-size: 13px;
+          text-transform: uppercase;
+          color: #FFF;
+          height: 30px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+}

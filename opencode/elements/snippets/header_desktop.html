@@ -1,0 +1,41 @@
+<div class="header--desktop">
+	{% element 'snippets/top_bar' %}
+
+	<div class="header__container head">
+		{% element 'snippets/store_logo' %}
+		{% element 'snippets/search' %}
+		
+		<ul class="header__list">
+			<li class="header__list-item header__label">
+				<a href="{{ links.central }}" class="header__list-link">
+					<svg class="header__list-icon icon--user"><use xlink:href="#icon-user"></use></svg>
+					Entre ou Cadastre-se
+					<svg class="header__list-icon icon--arrow"><use xlink:href="#icon-arrow-down"></use></svg>
+				</a>
+				
+				<div class="header__dropdown">
+					{% element 'snippets/list_account' %}
+				</div>
+			</li>
+			<li class="header__list-item header__label">
+				<a href="{{ links.central }}" class="header__list-link">
+					<svg class="header__list-icon icon--user"><use xlink:href="#icon-support"></use></svg>
+					Central de Atendimento
+					<svg class="header__list-icon icon--arrow"><use xlink:href="#icon-arrow-down"></use></svg>
+				</a>
+				
+				<div class="header__dropdown">
+					<span class="header__dropdown-title">Contato</span>
+					{% element 'snippets/list_contact' %}
+					{% element 'snippets/list_social-media' %}
+				</div>
+			</li>
+		</ul>
+
+		{% element 'snippets/cart' %}
+	</div>
+
+	<div class="header__container">
+	{% element 'snippets/list_categories' %}
+	</div>
+</div>

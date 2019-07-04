@@ -1,0 +1,17 @@
+<section id="newsletter" class="newsletter">
+    <h4 class="newsletter__title">
+       Newsletter
+    </h4>
+    <p class="newsletter__sub">
+        Cadastre-se e receba nossas novidades e promo&#231;&#245;es no seu e-mail.
+    </p>
+    <form action="{{ links.newsletter }}" class="newsletter__form" method="POST">
+        <input type="hidden" name="loja" value="{{ store.id }}">
+        <input name="email" type="text" id="news-email" class="newsletter__email newsletter__input" placeholder="Digite aqui o seu e-mail.">
+        <button type="input" class="newsletter__button">
+            Enviar
+            <svg class="newsletter__icon icon--arrow"><use xlink:href="#icon-arrow-right"></use></svg>
+        </button>
+    </form>
+    {% element 'snippets/list_social-media' %}
+</section>

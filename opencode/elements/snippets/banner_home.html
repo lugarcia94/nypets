@@ -1,0 +1,17 @@
+{% if pages.current == 'home' %}
+<div class="banner-home__wrapper">
+    {% if banners.home.slides %}
+        <div class="banner-home__list">
+            {% for slide in banners.home.slides %}
+            <div class="banner-home__item">
+                <a href="{{ slide.link }}" class="banner-home__link" target="{{ slide.target }}">
+                    <img src="{{ slide.image }}" class="banner-home__image" alt="{{ slide.label }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="banner banner-home">{{ banner.home }}</div>
+    {% endif %}
+</div>
+{% endif %}

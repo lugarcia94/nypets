@@ -1,0 +1,26 @@
+<div class="header--mobile">
+    <div class="header__container">
+        <div class="header__menu-mobile">
+            <div class="header__menu--open">
+                <svg class="header__icon--open icon--menu"><use xlink:href="#icon-menu"></use></svg>
+            </div>
+
+            <div class="header__menu-overlay" style="opacity: 0; width: 0px;"></div>
+            
+            <div class="header__menu-wrapper">
+                <div class="header__menu--close">
+                    <svg class="header__icon--close icon--close"><use xlink:href="#icon-close"></use></svg>
+                </div>
+
+                {% element 'snippets/list_account' %}
+                {% element 'snippets/list_categories' %}
+                {% element 'snippets/list_contact' %}
+                {% element 'snippets/list_social-media' %}
+            </div>
+        </div>
+
+        {% element 'snippets/store_logo' %}
+        {% element 'snippets/cart' %}
+        {% element 'snippets/search' %}
+    </div>
+</div>

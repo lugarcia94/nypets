@@ -1,0 +1,18 @@
+<div class="catalogo-pages">
+    {% if paginate.params.pageCount > 1 %}        
+        {% if paginate.hasPrev %}
+            {{ paginate.prev('<', {'class': 'page-link page-previous'}) }}
+        {% endif %}
+        
+        {{ paginate.numbers({
+            'modulus': 3,
+            'separator': '',
+            'class': 'page-link',
+            'currentClass': 'page-current'
+        }) }}
+        
+        {% if paginate.hasNext %}
+            {{ paginate.next('>', {'class': 'page-link page-next'}) }}
+        {% endif %}
+    {% endif %}
+</div>

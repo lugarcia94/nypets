@@ -1,0 +1,70 @@
+{% if products|length > 0 %}
+<aside class="smart_filter col-xs-3 visible-lg">
+    <button class="mobileFilter btn btn-primary pull-right hidden-lg">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+    <div class="categories">
+        <div class="categories__title">
+            Categoria
+        </div>
+        <ul class="categories__list">
+            {% for cat in categories %}
+            <li class="categories__item categories__item--01">
+                <a href="{{ cat.link }}" class="categories__link categories__link--01">{{ cat.name }}</a>
+                {% if cat.children %}
+                <ul class="categories__sub">
+                    {% for child in cat.children %}
+                    <li class="categories__item categories__item--02">
+                        <a href="{{ child.link }}" class="categories__link categories__link--02">{{ child.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% element('snippets/smart_filter') %}
+</aside>
+
+<section class="products-categories col-xs-12 col-md-9">
+    <div class="row">
+        <ul class="breadcrumb col-xs-12">
+            <li class="breadcrumb__text">Você est&#225; em:</li>
+            <li><a href="{{ links.home }}" class="breadcrumb__link home">P&#225;gina Inicial</a></li>
+            {% if breadcrumb %}
+            {% for item in breadcrumb %}
+            <li><a href="{{ item.link }}" class="breadcrumb__link" title="{{ item.name }}">{{ item.name|slice(0,70) }}</a></li>
+            {% endfor %}
+            {% endif %}
+            <li class="breadcrumb__text">Buscando por {{ search.word }}</li>
+        </ul>
+
+        <div class="col-xs-12 pagination-search-and-category top">
+            <button class="mobileFilter btn btn-primary pull-left visible-xs visible-sm" data-id="sm-filter">
+                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                Filtro
+            </button>
+
+            <span class="catalogo-display">{{ paginate.counter('Resultado <strong>{:count} Produtos</strong> em <strong>{:pages} P&#225;ginas</strong>') }}</span>
+  
+            <div class="filter-category">
+                {% element 'snippets/filter' {'brands': category.brands } %}
+            </div>
+
+            {% element 'snippets/pagination' %}
+        </div>
+
+        <div class="products col-xs-12">
+            {% element 'snippets/showcase' { "products": products } %}
+        </div>
+
+        <div class="col-xs-12 pagination-search-and-category bottom">
+            <span class="catalogo-display">{{ paginate.counter('Resultado <strong>{:count} Produtos</strong> em <strong>{:pages} P&#225;ginas</strong>') }}</span>
+            {% element 'snippets/pagination' %}
+        </div>
+    </div>
+</section>
+{% else %}
+<p class="message--no-products">Nenhum produto encontrado.</p>
+{% endif %}

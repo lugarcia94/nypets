@@ -1,0 +1,20 @@
+<div class="social-media">
+    <h4 class="social-media__title">Siga-nos</h4>
+    <ul class="social-media__list">
+        {% if settings.instagram %}
+        <li class="social-media__item">
+            <a href="{{ settings.instagram }}" class="social-media__link" target="_blank">
+                <svg class="social-media__icon icon--instagram"><use xlink:href="#icon-instagram"></use></svg>
+            </a>
+        </li>
+        {% endif %}
+        
+        {% if settings.facebook %}
+        <li class="social-media__item">
+            <a href="{{ settings.facebook }}" class="social-media__link" target="_blank">
+                <svg class="social-media__icon icon--facebook"><use xlink:href="#icon-facebook"></use></svg>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</div>

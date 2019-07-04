@@ -1,0 +1,17 @@
+.header__top {
+    background: $cor01;
+    padding: 10px 0;
+
+    @media(max-width: 991px) {
+        display: none;
+    }
+
+    &--left, &--right{
+        color: $cor02;
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0 60px;
+        text-transform: uppercase;
+    }
+}
+

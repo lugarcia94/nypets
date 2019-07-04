@@ -1,0 +1,25 @@
+<div class="lightbox-out occult">
+    <div class="lightbox__wrapper">
+        <span class="lightbox__close">
+            X
+        </span>
+
+        <div class="lightbox__body" style="background: url({{ asset(settings.light) }})">
+            <div class="lightbox__body--header">
+                <span class="lightbox__body--title">Cadastre-se e receba {{ settings.lightboxPorcent }} de descontos na primeira compra!</span>        
+            </div>
+            
+            <div class="lightbox__body--footer">
+                <form action="{{ links.newsletter }}" class="newsletter__form lightbox__form" method="POST">
+                    <input type="hidden" name="loja" value="{{ store.id }}">
+                    <input name="email" type="text" id="news-email" class="newsletter__email newsletter__input" placeholder="Digite aqui o seu e-mail.">
+                    <button type="input" class="newsletter__button">
+                        Enviar
+                        <svg class="newsletter__icon icon--arrow"><use xlink:href="#icon-arrow-right"></use></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <span class="lightbox__close--second">N&#227;o tenho interesse.</span>
+    </div>
+</div> 

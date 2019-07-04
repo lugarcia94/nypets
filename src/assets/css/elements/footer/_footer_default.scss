@@ -1,0 +1,105 @@
+.footer{
+  display: block;
+
+  &__container{
+    margin: 0 auto;
+    max-width: 1300px;
+    width: calc(100% - 30px);
+  }
+
+  &__wrapper{
+    background: $cor02;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px 0;
+  }
+
+  &__pages{
+    display: block;
+  }
+
+  &__brand{
+    height: 56px;
+    margin-bottom: 10px;
+    width: 100px;
+  }
+
+  &__link{
+    color: $medium-gray;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  &__copyright{
+    &-text{
+      color: $cor03;
+      font-size: 13px;
+      font-weight: 500;
+      max-width: 290px;
+      letter-spacing: 0.01px;
+
+      br{
+        line-height: 2;
+      }
+    }
+  }
+
+  &__credit{
+    &-list{
+      align-items: center;
+      background: $blue;
+      display: flex;
+      justify-content: center;
+
+      @media(min-width: 1065px) {
+        box-shadow: 1000px 0px $blue, -1000px 0px $blue;
+      }
+      @media(max-width: 1064px) and (min-width: 992px){
+              box-shadow: 750px 0px $blue, -750px 0px $blue; 
+      }
+      @media(max-width: 991px) {
+          box-shadow: 250px 0px $blue, -250px 0px $blue;
+      }
+    }
+    &-link {
+      display: block;
+      max-width: 60px;
+
+      &--auaha{
+        margin-right: 10px;
+      }
+      &--tray{
+        
+      }
+    }
+
+    &-image {
+        display: block;
+        height: 30px;
+        width: 50px;
+    }
+  }
+
+  &__payment{
+    &-list{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 290px;
+    }
+    &-item{
+      display: flex;
+      margin: 2px 1px;
+      max-width: 34px;
+      max-height: 22px;
+    }
+  }
+
+  &__security{
+    &-seal{
+      display: flex;
+    }
+  }
+}

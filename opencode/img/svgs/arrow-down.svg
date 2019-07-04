@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="6px" viewBox="0 0 11 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Topo" transform="translate(-1368.000000, -77.000000)" fill="#909292">
+            <g id="conta">
+                <g transform="translate(1246.000000, 65.000000)">
+                    <path d="M126.288097,15.0178571 L130.463702,10.8985163 C130.672065,10.6929616 130.672065,10.3597017 130.463702,10.154147 C130.255338,9.94861767 129.917524,9.94861767 129.709161,10.154147 L125.156273,14.6456597 C124.947909,14.8512145 124.947909,15.1844743 125.156273,15.3900291 L129.709161,19.8815419 C129.813329,19.984332 129.9499,20.0357143 130.086444,20.0357143 C130.222988,20.0357143 130.359558,19.984332 130.463727,19.8815419 C130.672091,19.6759871 130.672091,19.3427273 130.463727,19.1371725 L126.288097,15.0178571 Z" id="Path" transform="translate(127.810000, 15.017857) rotate(-90.000000) translate(-127.810000, -15.017857) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

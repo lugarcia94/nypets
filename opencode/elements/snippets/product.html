@@ -1,0 +1,91 @@
+<li class="showcase__item" itemscope itemtype="http://schema.org/SomeProducts">
+    <div class="border{% if not product.available %} off{% endif %}">
+        <figure class="showcase-image">
+            <a href="{{ product.link }}">
+                <img itemprop="image" class="img-responsive" src="{{ product.images[0].full }}" alt="{{ product.name }}">
+            </a>
+        </figure>
+
+        {% if product.available %}
+            <div class="labels">
+                {% if product.price_offer > 0 %}
+                    <span class="product__offer">
+                        {% set percent = 100 - ( product.price_offer / product.price ) * 100 %}
+                        <span class="preco-off">-{{ percent|number_format }}%</span>
+                    </span>
+                {% endif %}
+
+                {% if product.free_shipping %}
+                    {% if Image('free_shipping') %}
+                        <span class="free-shipping">{{ Image('free_shipping') }}</span>
+                    {% else %}
+                        <span class="label free-shipping">Frete Gr&#225;tis</span>
+                    {% endif %}
+                {% endif %}
+
+                {% if product.new %}
+                    {% if Image('new') %}
+                        <span class=" botao-new">{{ Image('new') }}</span>
+                    {% else %}
+                        <span class="label new">Novidade</span>
+                    {% endif %}
+                {% endif %}
+
+                {% if product.featured %}
+                    {% if Image('featured') %}
+                        <span class="featured">{{ Image('featured') }}</span>
+                    {% else %}
+                        <span class="label featured">Brinde</span>
+                    {% endif %}
+                {% endif %}
+
+                {% if product.additional_button %}
+                    {% if Image('additional_button') %}
+                        <span class="additional">{{ Image('additional_button') }}</span>
+                    {% else %}
+                        <div class="label additional">
+                            <span class="additional__title"></span>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="showcase__bloco">
+            <h3 class="showcase-name" itemprop="name">
+                <a href="{{ product.link }}">{{ product.name|slice(0,80) }}</a>
+            </h3>
+    
+            {% if product.available %}
+            <div class="showcase__prices">
+                {% if product.price_offer > 0 %}
+                <em class="preco-de" itemprop="price">R$ {{ product.price|currency }}</em>
+                <strong class="preco-por" itemprop="offers">R$ {{ product.price_offer|currency }}</strong>
+                {% else %}
+                <strong class="preco-por" itemprop="price"> R$ {{ product.price|currency }}</strong>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% if product.available %}
+        <div class="showcase__buy">
+            {% if product.has_variation %}
+            <a class="showcase__buy--button" href="{{ product.link }}">Comprar</a>
+            {% else %}
+            <button type="button" class="showcase__buy--button" data-cart="buy" onclick="addCart({{ product.id }})">
+                Compra R&#225;pida
+            </button>
+            {% endif %}    
+
+            <button class="showcase__buy--quick" data-quickview-button type="button" data-id="{{ product.id }}">
+                Espiar
+            </button>
+        </div>
+
+    {% else %}
+        <div class="labels">
+            <span class="label label-default unavailable">Indispon&#237;vel</span>
+        </div>
+    {% endif %}
+</li>

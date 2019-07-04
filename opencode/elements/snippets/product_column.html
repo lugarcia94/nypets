@@ -1,0 +1,97 @@
+<li itemscope itemtype="http://schema.org/SomeProducts">
+    <div class="border {% if not product.available %} off {% endif %}">
+        <div class="left">
+            <figure class="product-image">
+                <a href="{{ product.link }}">
+                    <img class="img-responsive" src="{{ product.images[0].large }}" alt="{{ product.name }}">
+                </a>
+            </figure>
+
+            <button class="quickview__button" data-id="{{product.id}}" data-quickview-button="Espiar">
+                <svg class="quickview__icon icon--quickview">
+                    <use xlink:href="#quickview"></use>
+                </svg>
+                Espiar
+            </button>
+        </div>
+        <div class="right">
+            <div class="env-category">
+                {% for cat in categories %}
+                {% if cat.id == product.category_id %}
+                <a href="{{ cat.link }}" class="product__category">{{ cat.name }}</a>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+
+            <div class="product-name" itemprop="name">
+                <a href="{{ product.link }}">
+                    <h3>{{ product.name|slice(0,80) }}</h3>
+                </a>
+
+            </div>
+
+            {% if product.available %}
+
+            <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                {% if product.upon_request %}
+                <span class="sob-consulta">Pre&#231;o sob consulta</span>
+                {% else %}
+                {% if product.price_offer > 0 %}
+                <div class="preco-de">
+                    <span>De</span>
+                    <span itemprop="price">R$ {{ product.price|currency }}</span>
+                </div>
+                <div class="preco-por">
+                    <strong itemprop="price">R$ {{ product.price_offer|currency }}</strong>
+                </div>
+                {% else %}
+                <div class="preco-por">
+                    <strong itemprop="price">R$ {{ product.price|currency }}</strong>
+                </div>
+                {% endif %}
+
+                <meta itemprop="priceCurrency" content="BRL">
+                {% if product.payment %}
+                <span class="parcelamento">{{ product.payment }}</span>
+                {% endif %}
+                {% endif %}
+            </div>
+            {% else %}
+            {% if Image('unavailable_button') %}
+            <div class="labels">
+                <span class="unavailable">{{ Image('unavailable_button') }}</span>
+            </div>
+            {% else %}
+            <div class="labels">
+                <span class="label label-default unavailable">Indispon&#237;vel</span>
+            </div>
+            {% endif %}
+            {% endif %}
+
+            <div class="action-buttons">
+                {% if product.stock > 0 and product.available %}
+                <div class="addcart" id="variants">
+                    {% if product.has_variation %}
+                    <a href="{{ product.link }}" class="addCart">
+                        <svg class="addCart__icon icon--cart">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        Mais Detalhes
+                    </a>
+                    {% else %}
+                    <button class="addCart addcart-{{ product.id }}" onclick="addCart({{ product.id }})">
+                        <svg class="addCart__icon icon--cart">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        Adicionar à Sacola
+                    </button>
+                    {% endif %}
+                </div>
+                {% else %}
+                    <span class="label new unavailable">Indispon&#237;vel</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</li>

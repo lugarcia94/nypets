@@ -1,0 +1,38 @@
+@mixin dropdown-01(
+  	 $color					:		$dropdownd-color,
+	 $background			:		$dropdown-background,
+	 $border				:		$dropdown-border,
+	 $border-radius			:		$dropdown-border-radius,
+	 $box-shadow			:		$dropdown-box-shadow,
+	 $font-size				:		$dropdown-font-size,
+	 $font-family			:		$dropdown-font-family,
+	 $line-height			:		$dropdown-line-height,
+     $padding				:		$dropdown-padding
+){
+	.dropdown-menu{
+		@if $background 		!= ''	{  background: $background;  				}
+		@if $border				!= ''	{  border: $border;  						}
+		@if $border-radius 		!= ''	{  @include border-radius($border-radius); 	}
+	  	@if $box-shadow	 		!= ''	{  @include  box-shadow($box-shadow); 		}
+	  	@if $padding			!= ''	{  padding:$padding;						}
+		>li{
+			>a{
+				@if $color 				!= '' 	{  color: $color; 							}
+				@if $font-family 		!= ''	{  font-family: $font-family;  				}
+				@if $font-size 			!= ''	{  font-size: $font-size;  					}
+			  	@if $line-height   		!= '' 	{  line-height: $line-height; 				}
+				>i{
+				  	margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

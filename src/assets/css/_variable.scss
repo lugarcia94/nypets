@@ -1,0 +1,156 @@
+// Cores Padr&#245;es
+$cor01:							#00a3d8; // Azul
+$cor02:							#ffffff; // Branco
+$cor03:                         #353535; // Preto
+$blue:							#f5fafc; // Azul claro
+$dark-gray:                     #353535; // Cinza Escuro
+$medium-gray:					#696969; // Cinza Medio
+$light-gray:                    #909292; // Cinza Claro
+$light-pattern:                 repeating-linear-gradient(-45deg, transparent, transparent 4px, rgba(0, 0, 0, 0.03) 7px, rgba(0, 0, 0, 0.03) 1px);
+$dark-pattern:                  repeating-linear-gradient(-45deg, transparent, transparent 4px, rgba(0, 0, 0, 0.2) 6px, rgba(0, 0, 0, 0.2) 1px);
+$gradiente:						linear-gradient(to bottom, #f5fafc, #ffffff 14%, #ffffff 81%, #f5fafc);
+
+// Padr�o de Font
+$font-family: 					'Quicksand', sans-serif;
+$font-family2:					'Poppins', sans-serif;
+$font-size: 					12px;
+$line-height: 					$font-size;
+$font-weight: 					'';
+$text-transform:				'';
+$text-decoration:				none;
+
+// Bordas redondas
+$border:                        1px solid rgba(0,0,0,(2/10));
+$border-color:                  rgba(0,0,0,(2/10));
+$border-radius:					0;
+
+// Sombra
+$box-shadow:					0 1px 4px 0 rgba(0, 0, 0, 0.15);
+$color-shadow:                  rgba(0,0,0,(1.5/10));
+
+// Transi��o
+$transition:					all 200ms ease-in-out;
+
+// Texto Padr�o
+$text-color:					lighten($cor02,40%);
+$text-font-family:				$font-family;
+$text-font-size:				$font-size;
+$text-line-height:				$line-height;
+$text-font-weight:				$font-weight;
+$text-text-transform:			$text-transform;
+$text-text-align:				'';
+
+// Link Padr�o
+$link-color:					$cor01;
+$link-font-family:				'';
+$link-background:				'';
+$link-font-size:				'';
+$link-line-height:				'';
+$link-font-weight:				'';
+$link-text-transform:			'';
+$link-decoration:				$text-decoration;
+$link-cursor:					'';
+$link-text-align:				'';
+	// Link Hover
+	$link-hover-color:					#333;
+	$link-hover-font-family:			'';
+	$link-hover-background:				'';
+	$link-hover-font-size:				'';
+	$link-hover-line-height:			'';
+	$link-hover-font-weight:			'';
+	$link-hover-text-transform:			'';
+	$link-hover-decoration:				$text-decoration;
+	$link-hover-cursor:					'';
+	$link-hover-text-align:				'';
+
+// Form
+$form-color:					lighten($cor02,30%);
+$form-background:				'';
+$form-border:					$border;
+$form-border-radius:			$border-radius;
+$form-box-shadow: 				none;
+$form-font-size:				$font-size;
+$form-font-family:				'';
+$form-height:					40px;
+$form-width:					100%;
+	// Form Hover
+	$form-hover-color:					'';
+	$form-hover-background:				'';
+	$form-hover-border:					1px solid $cor01;
+	$form-hover-border-radius:			'';
+	$form-hover-box-shadow: 			none;
+	$form-hover-font-size:				'';
+	$form-hover-font-family:			'';
+	$form-hover-height:					'';
+	$form-hover-width:					'';
+
+
+// Bot�o
+$button-color:					lighten($cor02,100%);
+$button-background:				$cor01;
+$button-border:					none;
+$button-border-radius:			$border-radius;
+$button-box-shadow:				'';
+$button-font-size:				$font-size;
+$button-font-family:			'';
+$button-line-height:			40px;
+$button-padding:                0;
+$button-width:					'';
+	// Bot�o Hover
+	$button-hover-color:					$button-color;
+	$button-hover-background:				darken($button-background , 10%);
+	$button-hover-border:					'';
+	$button-hover-border-radius:			'';
+	$button-hover-box-shadow:				'';
+	$button-hover-font-size:				'';
+	$button-hover-font-family:				'';
+	$button-hover-line-height:				'';
+	$button-hover-padding:                  '';
+	$button-hover-width:					'';
+
+
+
+
+
+
+
+
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

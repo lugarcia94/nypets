@@ -1,0 +1,196 @@
+.page-register {
+  main {
+    > .container {
+      > .container {
+        padding: 0;
+      }
+    }
+  }
+
+  .carrinho-heading {
+    display: none;
+  }
+  #CadastroAbas {
+    ul {
+      li {
+        display: inline-block;
+        a {
+          background: none;
+          border: 0;
+          color: #000;
+          font-size: 12px;
+          line-height: 40px;
+          text-transform: uppercase;
+          width: 100%;
+          padding: 0 15px;
+          display: inline-block;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+        }
+        &.aberta {
+          a {
+            @include button(#666, #f4f4f4, 0, '', '', '', '', '', '', '');
+          }
+        }
+      }
+    }
+
+  }
+  form#frm2 {
+    background: #f4f4f4;
+    padding: 29px;
+
+    #tit_cadastro_pf,
+    #tit_cadastro_pj {
+      h2 {
+        margin-top: 0;
+        line-height: normal;
+        font-size: inherit;
+
+        span {
+          font-weight: 700;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #333;
+        }
+      }
+    }
+
+    .obriga.red {
+      display: inline-block;
+      color: #f55;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 2px;
+        height: 10px;
+        background: #f55;
+      }
+    }
+
+    strong {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #333;
+    }
+
+    label {
+      margin: 10px 0;
+      width: 50% !important;
+      font-weight: 400;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #6e6e6e;
+
+      &:first-of-type {
+        margin-top: 25px;
+      }
+    }
+
+    input {
+      color: #444;
+      margin-top: 5px;
+      margin-bottom: 3px;
+      padding-left: 15px;
+      width: 100% !important;
+      border-radius: 4px;
+
+      &[type=checkbox] {
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin: 0 6px 0 0;
+        width: 15px !important;
+        height: 15px;
+      }
+    }
+
+    select {
+      margin-top: 5px;
+      padding-left: 15px;
+      width: 100%;
+      height: 40px;
+      border: 1px solid rgba(0, 0, 0, 2/10);
+      border-radius: 4px;
+
+      &:focus {
+        border-color: $cor01;
+      }
+    }
+
+    #span_cep_nacional,
+    #cep_nacional_span {
+      display: block;
+    }
+
+    #cep_1,
+    #cep_2,
+    #cobranca_cep_1,
+    #cobranca_cep_2 {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100px !important;
+    }
+
+    #cep_1,
+    #cobranca_cep_1 {
+      width: 100px !important;
+    }
+
+    #cep_2,
+    #cobranca_cep_2 {
+      width: 70px !important;
+    }
+
+    .txt-dados-entrega,
+    .txt-dados-cobranca {
+      margin: 20px 0 0 0;
+      font-size: inherit;
+      line-height: normal;
+
+      span {
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #333;
+      }
+    }
+
+    button {
+      display: block;
+      margin-top: 50px;
+      padding: 0 16px;
+      width: 100%;
+      max-width: 400px;
+      height: 50px;
+      line-height: 46px;
+      background: $cor01;
+      border: none;
+      border-radius: 4px;
+
+      span {
+        font-weight: 700;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFF;
+      }
+
+      img {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.text.inputErro,
+.text.obriga {
+  border-left: 3px solid #f00;
+}
+
+span.cadastro_nacional{
+    display: flex !important;
+    align-items:center;
+}

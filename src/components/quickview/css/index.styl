@@ -1,0 +1,555 @@
+.quickview
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .8)
+    z-index: 99999
+
+    option
+        &:disabled
+            display: none
+
+    .disabled
+        position: relative
+
+        &:before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+
+            background: rgba(255,255,255, .5)
+            z-index: 100
+
+    .prices
+        color: #000000
+        font-size: 13px
+        font-weight: 600
+        margin: 20px 0
+        padding: 20px 0
+
+        > span
+            display: block
+        
+        .from
+            color: #909292;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 12px;
+            margin: 0;
+            text-transform: uppercase;
+            text-decoration: line-through
+            vertical-align: middle;
+
+    .to
+        color: #000000
+        font-size: 30px
+        font-weight: 600
+        letter-spacing .2px
+        line-height: 1.4
+
+    .payment
+        color: #696969;
+        display: inline-block;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 11px;
+        text-transform: uppercase
+
+    .variant
+        label
+            color #353535
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing 0.87px
+            width: 30px
+            height: 30px
+            line-height: 30px
+            background-color: transparent
+            position: relative
+            text-align: center
+            margin-right: 16px
+
+        select
+            border: solid 1px #a7a7a7
+            background: #ffffff
+            width: 100%
+            font-size: 11px
+            color: #a7a7a7
+            line-height: 30px
+            height: 30px
+            padding: 0 15px
+            border-radius: 0
+
+
+    &[aria-hidden=true]
+        visibility: hidden
+        opacity:0
+
+        transition: all .2s ease-in-out
+
+
+    &[aria-hidden=false]
+        visibility: visible
+        opacity: 1
+
+        .quickview__container
+            transform: translate(-50%, -50%) scale(1)
+            visibility: visible
+            opacity: 1
+
+.quickview__container
+    display: flex
+    background: transparent
+    border-radius: 3px;
+    position: fixed
+    top: 50%
+    left: 50%
+    overflow-y: auto
+
+    padding: 40px
+
+    max-height: 100vh
+    max-width: 80vw
+    visibility: hidden
+    opacity: 0
+
+    transform: translate(-50%, -50%) scale(.5)
+
+    transition: all .3s ease-in-out
+
+    @media(max-width: 992px)
+        max-width: 100%
+        max-height: 100%
+
+
+    @media(max-width: 700px)
+        height: 100%
+        width: 100%
+        flex-wrap: wrap
+
+
+    @media(max-width: 440px)
+        padding: 40px 0
+.quickview__content
+    background: #fff
+    display: flex
+    justify-content: space-between
+    max-width: 1040px
+
+.quickview__images
+    display: flex
+    height: 100%;
+    margin: 0;
+    max-height: 400px
+    flex: 0 0 450px;
+    width: 600px
+    padding: 20px
+
+    @media(max-width: 700px)
+        max-width: calc(100% - 40px)
+        flex: 0 0 calc(100% - 40px)
+
+.quickview__image
+    align-items: center
+    display flex
+    height: 320px
+    justify-content center
+    max-height: 320px;
+    position: relative
+    order: 2
+    overflow: hidden
+
+    img
+        position: static
+        width: auto
+        max-width: 100%;
+        max-height: 320px
+
+.quickview__main
+    min-width: 400px
+    max-width: 100%
+    margin: 0 0 0 20px
+
+    @media(max-width: 700px)
+        flex: 0 0 calc(100% - 40px)
+        margin-top: 20px
+
+.quickview__main-content
+    background: #f5fafc
+    padding: 20px
+
+.quickview__images--more
+    margin: 0
+    order: 1
+    width: 70px
+
+    img
+        margin: 0 auto
+        max-width: 50px
+        cursor: pointer
+        cursor: hand
+
+    ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+    li
+        list-style: none
+        margin: 5px 10px
+
+    .slick-arrow
+        margin: 0 auto
+        width: 40px
+
+    .slick-prev
+        background: 15px 15px url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTVweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMTUgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjIgKDcyNjQzKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5QYXRoPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImhvbWUtbmV3eW9ya3BldHMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNTQuMDAwMDAwLCAtMTU2OC4wMDAwMDApIiBmaWxsPSIjOTA5MjkyIj4KICAgICAgICAgICAgPGcgaWQ9IlZpdHJpbmUtMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzU0LjAwMDAwMCwgMTM2MS4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSJTZXRhcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDIwNy4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMy4yODE3MDkzOCwxMi43ODQwOTA5IEwxMy45MTk5NzcxLDIuMjg5MTY3MjkgQzE0LjQ1MDgyOTEsMS43NjU0NzE0OCAxNC40NTA4MjkxLDAuOTE2NDE5MDM0IDEzLjkxOTk3NzEsMC4zOTI3MjMyMjcgQzEzLjM4OTEyNTIsLTAuMTMwOTA3NzQyIDEyLjUyODQ3MDcsLTAuMTMwOTA3NzQyIDExLjk5NzYxODgsMC4zOTI3MjMyMjcgTDAuMzk4MTM4OTYsMTEuODM1ODM2NSBDLTAuMTMyNzEyOTg3LDEyLjM1OTUzMjMgLTAuMTMyNzEyOTg3LDEzLjIwODU4NDcgMC4zOTgxMzg5NiwxMy43MzIyODA1IEwxMS45OTc2MTg4LDI1LjE3NTM5MzggQzEyLjI2MzAxMTksMjUuNDM3Mjc0MSAxMi42MTA5NTQyLDI1LjU2ODE4MTggMTIuOTU4ODMwOCwyNS41NjgxODE4IEMxMy4zMDY3MDc0LDI1LjU2ODE4MTggMTMuNjU0NjQ5NywyNS40MzcyNzQxIDEzLjkyMDA0MjksMjUuMTc1MzkzOCBDMTQuNDUwODk0OCwyNC42NTE2OTc5IDE0LjQ1MDg5NDgsMjMuODAyNjQ1NSAxMy45MjAwNDI5LDIzLjI3ODk0OTcgTDMuMjgxNzA5MzgsMTIuNzg0MDkwOSBaIiBpZD0iUGF0aCI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') no-repeat
+        background-size: 10px
+        font-size: 0
+        transform: rotate(90deg)
+    
+    .slick-next
+        background: 17px 16px url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTVweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMTUgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUzLjIgKDcyNjQzKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5QYXRoPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImhvbWUtbmV3eW9ya3BldHMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNjM0LjAwMDAwMCwgLTE1NjguMDAwMDAwKSIgZmlsbD0iIzkwOTI5MiI+CiAgICAgICAgICAgIDxnIGlkPSJWaXRyaW5lLTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM1NC4wMDAwMDAsIDEzNjEuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iU2V0YXMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCAyMDcuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTEyODMuMjgxNzEsMTIuNzg0MDkwOSBMMTI5My45MTk5OCwyLjI4OTE2NzI5IEMxMjk0LjQ1MDgzLDEuNzY1NDcxNDggMTI5NC40NTA4MywwLjkxNjQxOTAzNCAxMjkzLjkxOTk4LDAuMzkyNzIzMjI3IEMxMjkzLjM4OTEzLC0wLjEzMDkwNzc0MiAxMjkyLjUyODQ3LC0wLjEzMDkwNzc0MiAxMjkxLjk5NzYyLDAuMzkyNzIzMjI3IEwxMjgwLjM5ODE0LDExLjgzNTgzNjUgQzEyNzkuODY3MjksMTIuMzU5NTMyMyAxMjc5Ljg2NzI5LDEzLjIwODU4NDcgMTI4MC4zOTgxNCwxMy43MzIyODA1IEwxMjkxLjk5NzYyLDI1LjE3NTM5MzggQzEyOTIuMjYzMDEsMjUuNDM3Mjc0MSAxMjkyLjYxMDk1LDI1LjU2ODE4MTggMTI5Mi45NTg4MywyNS41NjgxODE4IEMxMjkzLjMwNjcxLDI1LjU2ODE4MTggMTI5My42NTQ2NSwyNS40MzcyNzQxIDEyOTMuOTIwMDQsMjUuMTc1MzkzOCBDMTI5NC40NTA4OSwyNC42NTE2OTc5IDEyOTQuNDUwODksMjMuODAyNjQ1NSAxMjkzLjkyMDA0LDIzLjI3ODk0OTcgTDEyODMuMjgxNzEsMTIuNzg0MDkwOSBaIiBpZD0iUGF0aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI4Ny4xNTkwOTEsIDEyLjc4NDA5MSkgcm90YXRlKC0xODAuMDAwMDAwKSB0cmFuc2xhdGUoLTEyODcuMTU5MDkxLCAtMTIuNzg0MDkxKSAiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+') no-repeat
+        background-size: 10px
+        font-size: 0
+        transform: rotate(90deg)
+
+   
+        
+            
+
+.quickview__button--close
+    position: absolute
+    top: 0px
+    right: 40px
+    padding: 0
+    background: none !important
+    border: 0
+    width: 45px
+    height: 45px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 10
+
+    cursor: pointer
+    cursor: hand
+
+    svg
+        width: 30px
+        height: 30px
+        position: relative
+        z-index: 1
+
+    &:before
+        content: ''
+        position: absolute
+        z-index: 2
+        background: rgba(0,0,0,0)
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.quckview__name
+    color: #353535;
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.6px
+    margin: 0 0 15px;
+
+.quickivew__sku
+    margin: 0
+    color: #767768;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: none;
+
+.quickview__small-description
+    color: #787878;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: -.1px;
+    line-height 15px;
+
+.quickview__actions
+    display: block
+    margin-top: 20px;
+
+.quickview__actions--buy
+    display: flex
+    justify-content: space-between
+    padding: 20px 0
+
+.quickview__quantity
+    height: 40px;
+    position: relative
+    width: 78px;
+
+    .qtds__button
+        font-size: 18px
+        position: absolute
+        top: 14px
+    
+    .quickview__qtd
+        font-size: 21px
+        font-weight: 500
+        height: 100%
+        padding: 0 20px
+        text-align: center
+        width: 100%
+        -webkit-appearance: none
+        -moz-appearance: none
+        box-shadow: none
+        border: 0
+
+    .qtds__button--less
+        left 10px
+
+    .qtds__button--more
+        right: 10px
+    
+
+.quickview__button--addcart,
+.quickview__button--finish
+    background-color: #00a3d8;
+    border: 1px solid #00a3d8;
+    color: white;
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    max-width: 360px
+    padding: 0 20px;
+    text-align: center;
+    transition: all 150ms ease-in-out;
+    width: 100%
+
+    &:hover
+      background-color: white;
+      color: #00a3d8;
+
+.quickview__button--addcart:disabled
+    background: #929292
+    border-color: #929292
+    color: white
+    opacity: .5
+
+    &:hover
+        color: white
+
+
+.quickview__button--finish
+    font-size: 14px
+    margin: 0
+    width: auto
+
+.quickview__link--more
+    border: 1px solid transparent;
+    color: #00a3d8;
+    display: block;
+    font-size: 16px
+    font-weight: 600
+    height: 35px
+    line-height: 12px
+    margin: 10px 0 0 20px;
+    padding: 11px 16px;
+    text-align: center
+    width: auto
+
+    &:hover
+        color #000000
+
+
+.quickview__button--continue
+    background: #000000
+    border: 1px solid #000000
+    color: white;
+    font-size: 14px
+    font-weight: 600
+    text-transform: uppercase
+    transition: all 150ms ease-in-out
+
+    height: 55px
+    line-height: 55px
+    padding: 0 10px
+    flex 1 1 auto
+
+    border-radius: 3px
+    margin: 0 20px 0 0
+
+    cursor: pointer
+    cursor: hand
+
+    &:hover
+        background: white
+        border-color: #e2b22b
+        color: #e2b22b
+
+.quickview__error, .quickview__unavailable
+    padding: 20px
+    font-size: 13px
+    font-weight: 400
+    background: #fe8b8b
+    color: #fff
+
+    margin: 20px 0
+
+.button-quickview
+    font-size: 11px
+    color: #a89797
+    position: absolute
+    top: 20px
+    right: 20px
+
+    display: flex
+    align-items: center
+
+    background: none
+    border: 0
+    line-height: 1
+
+    visibility: hidden
+    opacity: 0
+
+    transition: all .2s ease-in-out
+
+    .icon svg
+        fill:#cacaca
+        width: 18px
+        height: 18px
+        margin-right: 5px
+        position: relative
+        z-index: 1
+
+
+    &:before
+        content: ''
+        position: absolute
+        z-index: 2
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,0)
+
+    &:hover
+        color: #000
+
+        .icon svg
+            fill: #000
+
+
+.showcase ul li:hover
+    .border
+        background: #ffffff
+
+    .button-quickview
+        visibility: visible
+        opacity: 1
+
+.quickview--loaded
+    overflow: hidden
+
+.quckview__actions
+    width: 100%
+    text-align: center
+
+
+// Variatian Open
+.variant__title
+    font-size: 15px
+    font-weight: 500
+    letter-spacing: 0.87px
+    color: #353535
+
+.variants--open
+    display: flex
+    justify-content: space-between
+
+    .variant
+        display: flex
+        margin: 5px 4px 5px 0
+
+.variants--open .variant__radio
+    display: none
+
+.variants--open .variant__label
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.87px;
+    color: #2b2b2b
+    background-color: #fff
+    border: solid 2px transparent
+    border-radius: 2px
+    display: inline-block
+    margin: 5px
+    cursor: pointer
+    cursor: hand
+    width: 30px
+    height: 30px
+
+    .variant__radio:checked, & .variant__label
+       border: solid 2px #979797
+
+       
+
+
+.quickview--loaded
+    overflow: auto
+
+.quickview__finish
+    max-width: 550px
+    width 80vw
+
+    .quckview__actions
+        display flex
+
+.variant__title
+    font-size: 15px
+    font-weight: 500
+    letter-spacing: 0.87px
+    color: #353535
+
+.variant__radio[type="radio"]
+    border: solid 2px transparent
+    bottom: 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 5px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    &:checked, & .variant__label
+        border: solid 2px #979797
+        box-shadow: none
+
+.variant__label
+    color #353535
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing 0.87px
+    background-color: #fff
+    width: 30px
+    height: 30px
+        
+
+.variants--radio
+    margin-bottom 25px
+
+.variant__label--image
+    font-size: 10px !important
