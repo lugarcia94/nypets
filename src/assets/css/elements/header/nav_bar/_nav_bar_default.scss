@@ -5,7 +5,11 @@
         }
     }
 }
-
+.category__item--three {
+    @media(min-width: 992px) {
+        padding-left: 10px;
+    }
+}
 .category {
     // dropdown
     &__label {

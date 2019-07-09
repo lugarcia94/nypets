@@ -59,6 +59,7 @@
     &__bloco{
         display: flex;
         justify-content: space-between;
+        margin-top: 10px;
     }
 
     .env-category {
@@ -120,10 +121,7 @@
             justify-content: center;
             position: relative;
             width: 100%;
-    
-            @media (max-width: 1199px) {
-                height: 115px;
-            }
+ 
         }
     
         img {
@@ -300,12 +298,7 @@
         visibility: hidden;
         width: auto;
         z-index: -1;
-
-        @media(max-width: 767px) {
-            opacity: 1;
-            visibility: visible;
-            bottom: 40px;
-        }
+ 
 
         &--button{
             align-items: center;
