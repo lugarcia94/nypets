@@ -291,8 +291,18 @@ jQuery(document).ready(function ($) {
     jQuery(".lightbox__close--second").click(function(){
         jQuery(".lightbox-out").addClass('hidden');
     });
-  // end lightbox out
 
+    jQuery(".lightbox-out").click(function(e){
+        if($(e.target).hasClass('occult')) { 
+            jQuery(".lightbox-out").addClass('hidden');
+        }
+    });
+
+    jQuery(".header__menu-overlay").click(function(e){
+        $('.header__menu--close').trigger('click');
+    });
+
+  // end lightbox out
 
     +function ($) {
         'use strict';

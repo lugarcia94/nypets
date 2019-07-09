@@ -70,13 +70,17 @@
     </div>
     {% if product.available %}
         <div class="showcase__buy">
-            {% if product.has_variation %}
-            <a class="showcase__buy--button" href="{{ product.link }}">Comprar</a>
+            {% if not utils.is_mobile %}
+                {% if product.has_variation %}
+                <a class="showcase__buy--button" href="{{ product.link }}">Comprar</a>
+                {% else %}
+                <button type="button" class="showcase__buy--button" data-cart="buy" onclick="addCart({{ product.id }})">
+                    Compra R&#225;pida
+                </button>
+                {% endif %}    
             {% else %}
-            <button type="button" class="showcase__buy--button" data-cart="buy" onclick="addCart({{ product.id }})">
-                Compra R&#225;pida
-            </button>
-            {% endif %}    
+                <a class="showcase__buy--button" href="{{ product.link }}">Comprar</a>
+            {% endif %} 
 
  
         </div>
