@@ -920,7 +920,7 @@ main {
       width: 90vw;
 
       .lightbox__body--header{
-        height: 290px;
+        height: 260px;
       }
       .lightbox__body--title{
         font-size: 19px;
@@ -932,8 +932,16 @@ main {
         right: 10px;
       }
     }
+
+    @media(max-width: 375px){
+      .lightbox__close{
+        top: 20%;
+      }
+    }
       
   }
+
+  
 
   &__close {
     align-items: center;
@@ -978,6 +986,9 @@ main {
     @media(max-width: 992px){
       height: auto;
       width: auto;
+      background-size: 100%!important;
+      background-repeat: no-repeat!important;
+      background-position: center!important;
     }
 
     &--header{

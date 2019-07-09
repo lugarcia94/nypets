@@ -37,7 +37,8 @@
         padding: 0 !important;
       }
       .botao-efetuar-login {
-        @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
+        @include button(white, #00a3d8, none, 4px, none, '', 0, '', '', 100%);
+        background: #00a3d8;
         cursor: pointer;
         height: 40px;
         margin-top: 25px;
@@ -77,6 +78,7 @@
           }
           .botao-novo-cadastro {
             @include button(white, #333, none, 4px, none, '', 0, '', '', 100%);
+            background: #00a3d8;
             cursor: pointer;
             height: 40px;
             margin-top: 25px;

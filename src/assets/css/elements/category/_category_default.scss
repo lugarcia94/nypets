@@ -50,6 +50,7 @@
   &__item{
     align-items: center;
     display: flex;
+    height: 30px;
   }
   &__input{
     margin: 0 !important;
@@ -151,6 +152,11 @@
     }
   }
 }
+
+li.categories__item.categories__item--02 {
+  padding-left: 15px;
+}
+
 .filter__block {
   padding: 10px 0;
 }
@@ -571,6 +577,7 @@
 
       &--01 {
         margin-bottom: 7px;
+        color: #00a3d8;
       }
       &--02 {
         font-size: 14px;
