@@ -2,6 +2,14 @@ html {
   font-size: 100%;
 }
 
+.active__body.pace-done.moving .header__top {
+  display: none;
+}
+
+body.active__body.pace-done.show-menu {
+  overflow: hidden;
+}
+
 body {
   @include text();
   color: #333;
@@ -12,7 +20,7 @@ body {
     padding-top: 185px;
   }
   @media(max-width: 991px){
-    padding-top: 140px;
+    padding-top: 240px;
   }
 }
 // body {visibility:hidden;}

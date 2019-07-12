@@ -882,15 +882,15 @@
         }
       }
     
-      #cep1 {
-        border-right: none;
+      #cep1 { 
         padding: 15px 0 15px 10px;
         width: 60px;
+        margin-right: 5px;
       }
     
-      #cep2 {
-        border-left: none;
+      #cep2 { 
         width: 200px;
+        padding-left: 5px;
 
         @media(max-width: 991px){
           width: 110px;

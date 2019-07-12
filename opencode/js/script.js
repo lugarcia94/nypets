@@ -1,26 +1,6 @@
 
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
+
 
 jQuery(document).ready(function ($) {
     $('.botao-commerce.botao-novo-cadastro').click(function(){
@@ -256,33 +236,46 @@ jQuery(document).ready(function ($) {
             console.log(prodID)
         }, 5000); 
     }
+ 
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
 
-     // lightbox out
-     jQuery(function () {
-        (function () {
-            var e = getCookie('M-IDE')
-            if( "newsletter" != e ) {
-                jQuery(".lightbox-out").removeClass("hidden");
-                flag = 1,jQuery("html").addClass("show-idm");
-            }
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') { c = c.substring(1); }
+            if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
+        }
 
-            var t = jQuery(".lightbox__close");
-            t.attr("href", window.location.href), t.click(function () {
-                setCookie("M-IDE", "newsletter", 30);
-            });
+        return "";
+    } 
+    setCookie();
+    getCookie();
+    // lightbox newsletter
+    if ($('.lightbox-out').length > 0) {
 
-            var c = jQuery(".lightbox__close--second");
-            t.attr("href", window.location.href), c.click(function () {
-                setCookie("M-IDE", "newsletter", 30);
-            });
+        var lightboxtrue = Cookies.get('lightbox-out');
+        Cookies.set('lightbox-out', 'false');
 
-            $('.lightbox__wrapper form').submit(function(evt){
-                evt.preventDefault();
-                setCookie("M-IDE", "newsletter", 30);
-                this.submit();
-            });
-        })();
-    });
+        $('.lightbox__close').click(function () {
+                $('.lightbox-out').addClass("hidden");
+                $('body').removeClass('news-on');
+                Cookies.set('lightbox-out', 'true', { expires: 30 });
+        });
+
+        if (!lightboxtrue) {
+            $('.lightbox-out').removeClass("hidden");
+        }
+    }
+    // end lightbox newsletter
 
     jQuery(".lightbox__close").click(function(){
         jQuery(".lightbox-out").addClass('hidden');
@@ -293,7 +286,7 @@ jQuery(document).ready(function ($) {
     });
 
     jQuery(".lightbox-out").click(function(e){
-        if($(e.target).hasClass('occult')) { 
+        if($(e.target).hasClass('lightbox-out')) { 
             jQuery(".lightbox-out").addClass('hidden');
         }
     });
@@ -474,6 +467,8 @@ jQuery(document).ready(function ($) {
     });
 
     jQuery("body").addClass("active__body");
+
+
 
 });
 
