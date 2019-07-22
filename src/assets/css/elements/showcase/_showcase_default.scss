@@ -60,6 +60,7 @@
     &__bloco{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 10px;
     }
 
@@ -135,6 +136,7 @@
 
     &-name {
         margin: 0;
+        width: 100%;
         
         a {
             color: $cor03;
@@ -148,6 +150,7 @@
             overflow: hidden;
             text-align: left;
             transition: all 150ms ease-in-out;
+            text-align: center;
     
             &:hover {
                 color: $cor01;
@@ -192,7 +195,8 @@
     }
 
     &__prices {
-        text-align: right;
+        text-align: center;
+        width: 100%;
 
         .preco{
             &-por {
@@ -273,6 +277,10 @@
             padding: 20px 5px;
         }
         @include transition();
+
+        @media (max-width: 991px) {
+            height: auto;
+        }
     }
 
     .unavailable {

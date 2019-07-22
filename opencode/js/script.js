@@ -170,6 +170,15 @@ jQuery(document).ready(function ($) {
             });
         }
     }
+    if(jQuery(window).width() < 992) {
+        jQuery('.banner__wrapper--extras .banner__list').slick({
+            nextArrow: arrowNext,
+            prevArrow: arrowPrevious,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    }
 
     if(jQuery(window).width() < 1199) {
         var showcaseRelated = jQuery('.product__related .showcase__list');

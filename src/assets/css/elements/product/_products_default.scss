@@ -457,6 +457,14 @@
       .passo2{
         width: 100%;
         margin-top: 10px;
+
+        h2 {
+          font-size: 0;
+          &:before {
+            content: 'Escolha a cor';
+            font-size: 15px;
+          }
+        }
         .lista_cor_variacao{
           li{
             background: transparent;
@@ -885,12 +893,13 @@
       #cep1 { 
         padding: 15px 0 15px 10px;
         width: 60px;
-        margin-right: 5px;
+        border-right: 0;
       }
     
       #cep2 { 
         width: 200px;
         padding-left: 5px;
+        border-left: 0;
 
         @media(max-width: 991px){
           width: 110px;

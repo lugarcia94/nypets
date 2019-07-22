@@ -1,11 +1,17 @@
 <section class="header__top">
     <div class="header__container">
-        <span class="header__top--left">
-            {{ settings.topLeft }}
-        </span>
-        
-        <span class="header__top--right">
-            {{ settings.topRight }}
-        </span>
+        {% if not utils.is_mobile %}
+            <span class="header__top--left">
+                {{ settings.topLeft }}
+            </span>
+            
+            <span class="header__top--right">
+                {{ settings.topRight }}
+            </span>
+        {% else %}
+            <span class="header__top--left">
+                Frase a escolher
+            </span>
+        {% endif %}
     </div>
 </section>
