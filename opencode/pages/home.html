@@ -39,11 +39,10 @@
     <!-- VITRINE 2 -->
     {% if settings.showcaseFilter02 %}
     <section class="showcase__carousel showcase__carousel--two">
-        {% set products = Products({
-        'categories': settings.showcaseCategory02,
-        'filter': settings.showcaseFilter02,
+        {% set products = Products({ 
+        'filter': 'available',
         'limit': settings.showcaseQuantity02,
-        'order': settings.showcaseOrder02
+        'order': {'quantity_sold': 'desc'}
         }) %}
 
         {% element 'snippets/showcase' {

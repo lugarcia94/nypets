@@ -398,3 +398,13 @@
         }
     }
 }
+
+.showcase__carousel  {
+    .showcase__list {
+        opacity: 0;
+    }
+
+    .showcase__list.slick-initialized {
+        opacity: 1;
+    }
+}
