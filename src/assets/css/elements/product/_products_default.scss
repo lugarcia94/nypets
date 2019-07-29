@@ -458,13 +458,7 @@
         width: 100%;
         margin-top: 10px;
 
-        h2 {
-          font-size: 0;
-          &:before {
-            content: 'Escolha a cor';
-            font-size: 15px;
-          }
-        }
+  
         .lista_cor_variacao{
           li{
             background: transparent;
@@ -2508,14 +2502,6 @@ div#produto_preco > span.color-tone-2 {
 
 .cor_variacao.passo1 {
   margin-top: 10px;
-  &::before {
-    content: 'Primeira etapa';
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #00a3d8;
-    font-weight: 700;
- }
 }
 
  
