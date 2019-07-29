@@ -234,10 +234,16 @@ jQuery(document).ready(function ($) {
             }
 
             if(jQuery('.page-product').length > 0) {
-                var textoHtml = $('.texto_variacao h2').html();
-                if (textoHtml == 'Cores disponíveis') {
-                    $('.texto_variacao h2').html('Escolha a cor');
-                }
+                var cont = 0;
+                $('.product__variations').each(function(){
+                    cont = cont +1 ;
+                    var textoHtml = $(this).find('.texto_variacao > h2'); 
+                    var newText = textoHtml.html();
+                    console.log(newText, cont);
+                    if ( newText == 'Cores disponíveis') {
+                        $('.texto_variacao h2').html('Escolha a cor');
+                    }
+                });
             }
         });
         

@@ -73,7 +73,8 @@
         text-align: center;
         border: 1px solid transparent;
         min-width: 30px;
-
+        width: 34px;
+        height: 34px;
         div{
             line-height: 34px;
             height: 34px;
@@ -459,11 +460,8 @@
         margin-top: 10px;
 
         h2 {
-          font-size: 0;
-          &:before {
-            content: 'Escolha a cor';
-            font-size: 15px;
-          }
+          font-size: 15px;
+
         }
         .lista_cor_variacao{
           li{
