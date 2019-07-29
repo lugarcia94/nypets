@@ -22,7 +22,7 @@
             padding: 0;
 
             .slick-arrow{
-                width: 50px !important;
+                width: 80px!important;
 
                 svg{
                     fill: #909292;
@@ -67,11 +67,12 @@
     &__link {
         align-items: center;
         display: flex;
-        height: 50px;
+        height: 70px;
         justify-content: center;
         max-width: 100%;
         overflow: hidden;
-        width: 50px;
+        width: 70px;
+        margin: 10px auto;
 
         @media(min-width: 992px) {
             &:not(:last-child) {

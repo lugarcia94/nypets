@@ -58,6 +58,9 @@
     
             {% if product.available %}
             <div class="showcase__prices">
+                {% if product.has_variation %}
+                    <span class="variation__vitrine">A partir de:</span>
+                {% endif %}
                 {% if product.price_offer > 0 %}
                 <em class="preco-de" itemprop="price">R$ {{ product.price|currency }}</em>
                 <strong class="preco-por" itemprop="offers">R$ {{ product.price_offer|currency }}</strong>

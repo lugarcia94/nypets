@@ -73,7 +73,8 @@
         text-align: center;
         border: 1px solid transparent;
         min-width: 30px;
-
+        width: 34px;
+        height: 34px;
         div{
             line-height: 34px;
             height: 34px;
@@ -458,7 +459,10 @@
         width: 100%;
         margin-top: 10px;
 
-  
+        h2 {
+          font-size: 15px;
+
+        }
         .lista_cor_variacao{
           li{
             background: transparent;
@@ -775,7 +779,11 @@
     &__shipping {
       align-items: center;
       display: flex;
-      margin-top: 25px;
+      background: #f5fafc;
+      padding: 15px;
+      @media(min-width: 992px) {
+        box-shadow: 450px 0 #f5fafc, 500px 0 #f5fafc;
+      }
 
       .produto-calcular-frete{
         margin-right: 20px;
