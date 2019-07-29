@@ -18,7 +18,8 @@ jQuery(document).ready(function ($) {
                 jQuery('.thumbs__list').slick({
                     nextArrow: arrowNext,
                     prevArrow: arrowPrevious,
-                    slidesToShow: 5,
+                    slidesToShow: 6,
+                    infinite: false,
                     vertical: true,
                     responsive: [
                         { breakpoint: 1199, settings: { slidesToShow: 4 } },
@@ -230,6 +231,13 @@ jQuery(document).ready(function ($) {
     
             if(settings.url.indexOf('variacao_dupla_compre_junto') != -1) {
                 jQuery('select[data-tray-tst="buy_together_second_variation"]').SumoSelect();
+            }
+
+            if(jQuery('.page-product').length > 0) {
+                var textoHtml = $('.texto_variacao h2').html();
+                if (textoHtml == 'Cores disponíveis') {
+                    $('.texto_variacao h2').html('Escolha a cor');
+                }
             }
         });
         

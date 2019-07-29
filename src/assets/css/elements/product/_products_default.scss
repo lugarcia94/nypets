@@ -781,7 +781,11 @@
     &__shipping {
       align-items: center;
       display: flex;
-      margin-top: 25px;
+      background: #f5fafc;
+      padding: 15px;
+      @media(min-width: 992px) {
+        box-shadow: 450px 0 #f5fafc, 500px 0 #f5fafc;
+      }
 
       .produto-calcular-frete{
         margin-right: 20px;
@@ -2506,17 +2510,17 @@ div#produto_preco > span.color-tone-2 {
 }
 */
 
-.cor_variacao.passo1 {
-  margin-top: 10px;
-  &::before {
-    content: 'Primeira etapa';
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #00a3d8;
-    font-weight: 700;
- }
-}
+// .cor_variacao.passo1 {
+//   margin-top: 10px;
+//   &::before {
+//     content: 'Primeira etapa';
+//     display: block;
+//     margin-bottom: 10px;
+//     font-size: 16px;
+//     color: #00a3d8;
+//     font-weight: 700;
+//  }
+// }
 
  
 li.category--1.category__item--one.category__label.category__brands .category__dropdown {
