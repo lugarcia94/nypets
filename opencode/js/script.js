@@ -11,25 +11,27 @@ jQuery(document).ready(function ($) {
     var arrowPrevious = '<button type="button" class="slick-prev slick-arrow"><svg class="control__icon icon--previous"><use xlink:href="#icon-arrow-lefth"></use></svg></button>';
 
     // thumbs carousel
-    if(jQuery('.page-product').length > 0) {
-        jQuery(document).on('thumbs:start', function() {
-            var thumbs = jQuery('.thumbs__list');
-            if(thumbs) {
-                jQuery('.thumbs__list').slick({
-                    nextArrow: arrowNext,
-                    prevArrow: arrowPrevious,
-                    slidesToShow: 6,
-                    infinite: false,
-                    vertical: true,
-                    responsive: [
-                        { breakpoint: 1199, settings: { slidesToShow: 4 } },
-                        { breakpoint: 991, settings: { slidesToShow: 3, vertical: false } },
-                        { breakpoint: 767, settings: { slidesToShow: 2, vertical: false } }
-                    ]
-                });
-            }
-        });
-    }
+    // if(jQuery('.page-product').length > 0) {
+    //     if(jQuery(window).width() < 991) {
+    //         jQuery(document).on('thumbs:start', function() {
+    //             var thumbs = jQuery('.thumbs__list');
+    //             if(thumbs) {
+    //                 jQuery('.thumbs__list').slick({
+    //                     nextArrow: arrowNext,
+    //                     prevArrow: arrowPrevious,
+    //                     slidesToShow: 6,
+    //                     infinite: false,
+    //                     vertical: true,
+    //                     responsive: [
+    //                         { breakpoint: 1199, settings: { slidesToShow: 4 } },
+    //                         { breakpoint: 991, settings: { slidesToShow: 3, vertical: false } },
+    //                         { breakpoint: 767, settings: { slidesToShow: 3, vertical: false } }
+    //                     ]
+    //                 });
+    //             }
+    //         });
+    //     }
+    // }
     // end thumbs carousel
     
     if(jQuery('.page-home').length > 0) {

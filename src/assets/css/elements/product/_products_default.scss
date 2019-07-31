@@ -174,8 +174,9 @@
               flex: 0 0 90px;
           }
           &__video{
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAASCAMAAACZ8IWSAAAAqFBMVEVMaXEAo9gAqt8ApNgApNkAqv8Ao9oApNkAo9sApNkApNkApNgAquMA//8Ao9gAo9kApNgAptoApNkAruQApNsApNkApNkApNkApNgAquoAv98Ar98Aqt0ApNgApNkAo9kApdoApNkAo9gApdoAo9kA//8Ao9kAo9kApNkApdgApdkApNkApdgApNkAp+IApNkAo9gAo9gApNsApNkAo9kAo9sAqtwAo9j+4qyCAAAAN3RSTlMA9BjmrgN1xDL28O4SAvXRq0V4ExzoqbOYDAgQD99znILj53yvAYDI8VV/o2lqGsHy7GKm3k4kxXKWYwAAAIlJREFUKM91z8cWgjAQQNFHEQUBO3ax997y/3/mQjkmOrzVnNzFZADserVolHgNAB4X9VerBjxjJRQ04abEOnCXpUKUjatZWReLQja6DLbBV3xdoD9e5wiEaY709kNRut5U3BMu9c/5cP6MsWXc48BJvrQNV1k2wFyCHUA0cn7fJ4cF744lIxvgBSmuSBUWcEstAAAAAElFTkSuQmCC') no-repeat;
-            background-position: 12px 17px;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAABLFBMVEUAAAAAqt0ApNgAo9gAo9gAo9cApNgAo9cApNsAo9YApNgAo9gAo9gApNkAodcAo9kAo9UAo9gAodoAotcAo9gApNkApdoAo9gAo9gApdcAqtUAo9gAo9gAo9gApNcAo9gAo9gAo9gAo9gAo9gAo9gAo9kAo9gAo9gAo9gAo9gAo9gAotkAktsAo9cAo9gAotoAo9cAo9gAotEAo9gAo9kAqtUAndgAo9gAo9gAodcAo9gAo9gAqtUAo9gAo9cAotgAptMAn9cApNgAo9gAotYApNgAodsAo9gAotkA//8AotcApNgAqv8ApNcAo9gAo9gAo9gAotgAo9gAotgApNgAo9kApNcAmcwApNkAo9gAo9kAodgAo9kApdoAoNsAo9gAo9gAotgAo9gAo9hTbXjFAAAAY3RSTlMAD1R3kKeqUw5FuPm3Qya6JO5EUvtRMPT2Mwbc2m9t6ulIlpXKx+Ph+t3kPAds5Tdm5gvn6AwN7/ATi/4S84DtFyCR9yyiMf2zAU07A1rT2N7i4MnGk0YFatkvLlA+I/i2QnWdvv28AAABSElEQVR42u3W504CQRSG4U8XpCssIDrSFFEURFREUCkW7L1hRzn3fw8SiLohkOzO4ec+F/BOpmZgMg3XyKhisY7pYLUoNjt6OZwuMsDl9kBrfIIMc3o1w/tIgk8FuvwBkhIIomMyRJKmptEmZkhaWACIEEMUEDFiiAvMEosDc8SSwDyxJLFALItIUV9Ly6RLCtRfOrOSJT0GBVYBkcvyAkAmt8YLAOuRDfnAbyLPCwCbio8XAArKlmzgP1HkBYDS9g4vgN0yK1CqVDlTqFWKnEXc2z/gbONhPcA5SEf1Y85RTp9wLtPpWZJxnc8vLq9Ij0FP2vWN3iftlljucE8sD0gQyyOeiEWFiBNDvgFEieEZgAiTtJcG2l5DJKn8ho6g7CfrHej6iJGEqoo/XicZ5v6ElsfdJAOaX9/oZbe19H62W/4CTKah+gGOwsUI2M+H1QAAAABJRU5ErkJggg==');
+            background-position: center;
+            background-repeat: no-repeat;
             height: 100%;
             width: 100%;
           }
@@ -415,7 +416,7 @@
 
     &__general-information{
       @media(max-width: 991px){
-        margin-top: 40px;
+        margin-top: 20px;
       }
     }
 

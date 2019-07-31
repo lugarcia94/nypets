@@ -1074,3 +1074,17 @@ main {
   }
 }
 // end lightbox
+
+.banner__wrapper--extras {
+  .banner__item {
+    overflow: hidden;
+    img {
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+    }
+  }
+}

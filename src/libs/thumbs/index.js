@@ -35,6 +35,7 @@ if(cf.thumbs.actived) {
                     images.each((index, item) => {
                         html  +=  createThumb($(item).attr('src'), index);
                     });
+ 
                 
                     html  +=  `</ul>`;
                     html  +=  `</div>`;
