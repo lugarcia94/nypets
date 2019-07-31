@@ -197,6 +197,7 @@
     &__prices {
         text-align: center;
         width: 100%;
+        margin-top: 10px;
 
         .preco{
             &-por {
@@ -265,7 +266,7 @@
     .border {
         border: 1px solid transparent;
         border-radius: 0;
-        height: 395px;
+        height: 385px;
         margin: 0 auto;
         padding: 20px 10px;
         position: relative;
