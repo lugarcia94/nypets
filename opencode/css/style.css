@@ -2497,6 +2497,11 @@ body.moving--down .head {
       flex-wrap: wrap;
 }
 
+/* line 421, src/assets/css/elements/showcase/_showcase_default.scss */
+.ytp-pause-overlay.ytp-scroll-min.ytp-scroll-max {
+  display: none !important;
+}
+
 /* line 2, src/assets/css/elements/category/_category_default.scss */
 .filter-category {
   display: inline-block;

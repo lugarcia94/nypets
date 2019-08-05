@@ -417,3 +417,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.ytp-pause-overlay.ytp-scroll-min.ytp-scroll-max {
+    display: none!important;
+}
