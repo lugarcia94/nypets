@@ -2619,9 +2619,18 @@ div#produto_preco>span.color-tone-2 {
 
 
 li.category--1.category__item--one.category__label.category__brands .category__dropdown {
-  display: none;
+  @media(min-width: 992px) {
+    display: none;
+  }
+  
 }
 
+@media(max-width: 991px) {
+  li.category--111.category__item--two {
+    display: none;
+  }
+}
+ 
 .on__video:before {
   content: '';
   background: #00000087;
