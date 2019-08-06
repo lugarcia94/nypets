@@ -241,6 +241,7 @@ jQuery(document).ready(function ($) {
                 jQuery('#colVideo').click(function (e) {
                     if ($(e.target).hasClass('on__video')) {
                         jQuery('#colVideo').removeClass('on__video');
+                        $('#colVideo iframe').attr('src', $('#colVideo iframe').attr('src'));
                         jQuery('#colVideo').hide();
                     }
                 });
