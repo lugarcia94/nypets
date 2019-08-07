@@ -246,11 +246,12 @@
             display: flex;
             flex: 0 0 auto;
             height: 100%;
-            position: relative;
+            
 
             @media(max-width: 991px) {
                 flex-wrap: wrap;
                 justify-content: space-between;
+                position: relative;
             }
             @media(min-width: 992px){
                 padding: 0 40px;
