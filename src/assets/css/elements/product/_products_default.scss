@@ -1665,8 +1665,16 @@
 
     .preco-avista {
       color: #000;
-      font-size: 30px;
+      font-size: 22px;
       font-weight: 800;
+      text-transform: uppercase;
+
+      &:after {
+        content: 'no boleto';
+        text-transform: none;
+        font-size: 15px;
+        color: #696969;
+      }
     }
 
   }
@@ -2554,9 +2562,9 @@
 
 // end modals
 
-div#produto_preco>span.color-tone-2 {
-  display: block;
-}
+// div#produto_preco>span.color-tone-2 {
+  //   display: block;
+  // }
 
 /*
 .cor_variacao.passo1 {
@@ -2622,7 +2630,7 @@ li.category--1.category__item--one.category__label.category__brands .category__d
   @media(min-width: 992px) {
     display: none;
   }
-  
+
 }
 
 @media(max-width: 991px) {
@@ -2630,7 +2638,7 @@ li.category--1.category__item--one.category__label.category__brands .category__d
     display: none;
   }
 }
- 
+
 .on__video:before {
   content: '';
   background: #00000087;

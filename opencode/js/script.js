@@ -141,6 +141,22 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    var carroselMarcas = jQuery('.brands__list-carrosel');
+    if (carroselMarcas) {
+        jQuery(carroselMarcas).slick({
+            nextArrow: arrowNext,
+            prevArrow: arrowPrevious,
+            dots: false,
+            vertical: false,
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            responsive: [
+                { breakpoint: 1199, settings: { slidesToShow: 6, vertical: false, slidesToScroll: 6 } },
+                { breakpoint: 991, settings: { slidesToShow: 4, vertical: false, slidesToScroll: 4 } },
+                { breakpoint: 679, settings: { slidesToShow: 2, vertical: false, slidesToScroll: 2 } }
+            ]
+        });
+    }
     if (jQuery(window).width() < 991) {
         var information = jQuery('.information-list');
         if (information) {

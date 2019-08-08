@@ -1,9 +1,9 @@
 {% if settings.brandImage01 or settings.brandImage02 or settings.brandImage03 or settings.brandImage04 or settings.brandImage05 or settings.brandImage06 or settings.brandImage07 or settings.brandImage08 or settings.brandImage09 or settings.brandImage10 or settings.brandImage11 or settings.brandImage12 or settings.brandImage13 or settings.brandImage14 or settings.brandImage15 or settings.brandImage16 or settings.brandImage17 or settings.brandImage18 or settings.brandImage19 or settings.brandImage20  %}
-<div class="category-brands__list">
+<div class="brands__list-carrosel">
     {% if settings.brandImage01 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink01 }}" class="brands__link" target="_blank">
-            {{settings.brandName01}}
+            <img src="{{ asset(settings.brandImage01) }}" class="brands__image" alt="{{ settings.brandLink01 }}">
         </a>
     </div>
     {% endif %}
@@ -11,7 +11,7 @@
     {% if settings.brandImage02 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink02 }}" class="brands__link" target="_blank">
-            {{settings.brandName02}}
+            <img src="{{ asset(settings.brandImage02) }}" class="brands__image" alt="{{ settings.brandLink02 }}">
         </a>
     </div>
     {% endif %}
@@ -19,7 +19,7 @@
     {% if settings.brandImage03 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink03 }}" class="brands__link" target="_blank">
-            {{settings.brandName03}}
+            <img src="{{ asset(settings.brandImage03) }}" class="brands__image" alt="{{ settings.brandLink03 }}">
         </a>
     </div>
     {% endif %}
@@ -27,7 +27,7 @@
     {% if settings.brandImage04 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink04 }}" class="brands__link" target="_blank">
-            {{settings.brandName04}}
+            <img src="{{ asset(settings.brandImage04) }}" class="brands__image" alt="{{ settings.brandLink02 }}">
         </a>
     </div>
     {% endif %}
@@ -35,7 +35,7 @@
     {% if settings.brandImage05 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink05 }}" class="brands__link" target="_blank">
-            {{settings.brandName05}}
+            <img src="{{ asset(settings.brandImage05) }}" class="brands__image" alt="{{ settings.brandLink02 }}">
         </a>
     </div>
     {% endif %}
@@ -43,7 +43,7 @@
     {% if settings.brandImage06 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink06 }}" class="brands__link" target="_blank">
-            {{settings.brandName06}}
+            <img src="{{ asset(settings.brandImage06) }}" class="brands__image" alt="{{ settings.brandLink06 }}">
         </a>
     </div>
     {% endif %}
@@ -51,7 +51,7 @@
     {% if settings.brandImage07 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink07 }}" class="brands__link" target="_blank">
-            {{settings.brandName07}}
+            <img src="{{ asset(settings.brandImage07) }}" class="brands__image" alt="{{ settings.brandLink07 }}">
         </a>
     </div>
     {% endif %}
@@ -59,7 +59,7 @@
     {% if settings.brandImage08 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink08 }}" class="brands__link" target="_blank">
-            {{settings.brandName08}}
+            <img src="{{ asset(settings.brandImage08) }}" class="brands__image" alt="{{ settings.brandLink08 }}">
         </a>
     </div>
     {% endif %}
@@ -67,7 +67,7 @@
     {% if settings.brandImage09 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink09 }}" class="brands__link" target="_blank">
-            {{settings.brandName09}}
+            <img src="{{ asset(settings.brandImage09) }}" class="brands__image" alt="{{ settings.brandLink09 }}">
         </a>
     </div>
     {% endif %}
@@ -75,7 +75,7 @@
     {% if settings.brandImage10 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink10 }}" class="brands__link" target="_blank">
-            {{settings.brandName10}}
+            <img src="{{ asset(settings.brandImage10) }}" class="brands__image" alt="{{ settings.brandLink10 }}">
         </a>
     </div>
     {% endif %}
@@ -83,7 +83,7 @@
     {% if settings.brandImage11 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink11 }}" class="brands__link" target="_blank">
-            {{settings.brandName11}}
+            <img src="{{ asset(settings.brandImage11) }}" class="brands__image" alt="{{ settings.brandLink11 }}">
         </a>
     </div>
     {% endif %}
@@ -91,7 +91,7 @@
     {% if settings.brandImage12 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink12 }}" class="brands__link" target="_blank">
-            {{settings.brandName12}}
+            <img src="{{ asset(settings.brandImage12) }}" class="brands__image" alt="{{ settings.brandLink12 }}">
         </a>
     </div>
     {% endif %}
@@ -99,7 +99,7 @@
     {% if settings.brandImage13 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink13 }}" class="brands__link" target="_blank">
-            {{settings.brandName13}}
+            <img src="{{ asset(settings.brandImage13) }}" class="brands__image" alt="{{ settings.brandLink13 }}">
         </a>
     </div>
     {% endif %}
@@ -107,7 +107,7 @@
     {% if settings.brandImage14 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink14 }}" class="brands__link" target="_blank">
-            {{settings.brandName14}}
+            <img src="{{ asset(settings.brandImage14) }}" class="brands__image" alt="{{ settings.brandLink14 }}">
         </a>
     </div>
     {% endif %}
@@ -115,7 +115,7 @@
     {% if settings.brandImage15 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink15 }}" class="brands__link" target="_blank">
-            {{settings.brandName15}}
+            <img src="{{ asset(settings.brandImage15) }}" class="brands__image" alt="{{ settings.brandLink15 }}">
         </a>
     </div>
     {% endif %}
@@ -123,7 +123,7 @@
     {% if settings.brandImage16 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink16 }}" class="brands__link" target="_blank">
-            {{settings.brandName16}}
+            <img src="{{ asset(settings.brandImage16) }}" class="brands__image" alt="{{ settings.brandLink16 }}">
         </a>
     </div>
     {% endif %}
@@ -131,7 +131,7 @@
     {% if settings.brandImage17 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink17 }}" class="brands__link" target="_blank">
-            {{settings.brandName17}}
+            <img src="{{ asset(settings.brandImage17) }}" class="brands__image" alt="{{ settings.brandLink17 }}">
         </a>
     </div>
     {% endif %}
@@ -139,7 +139,7 @@
     {% if settings.brandImage18 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink18 }}" class="brands__link" target="_blank">
-            {{settings.brandName18}}
+            <img src="{{ asset(settings.brandImage18) }}" class="brands__image" alt="{{ settings.brandLink18 }}">
         </a>
     </div>
     {% endif %}
@@ -147,7 +147,7 @@
     {% if settings.brandImage19 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink19 }}" class="brands__link" target="_blank">
-            {{settings.brandName19}}
+            <img src="{{ asset(settings.brandImage19) }}" class="brands__image" alt="{{ settings.brandLink19 }}">
         </a>
     </div>
     {% endif %}
@@ -155,7 +155,7 @@
     {% if settings.brandImage20 %}
     <div class="brands__item">
         <a href="/{{ settings.brandLink20 }}" class="brands__link" target="_blank">
-            {{settings.brandName20}}
+            <img src="{{ asset(settings.brandImage20) }}" class="brands__image" alt="{{ settings.brandLink20 }}">
         </a>
     </div>
     {% endif %}

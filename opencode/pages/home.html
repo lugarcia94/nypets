@@ -1,6 +1,10 @@
 <div class="main__container">
     {% element 'snippets/banner_info' %}
 
+    <section class="marcas__carrosel">
+        {% element 'snippets/list_brandsc' %}
+    </section>
+
     {% if banner.extra1 or banner.extra2 %}
     <div class="banner__wrapper--extras">
         <div class="banner__list">
@@ -10,7 +14,7 @@
     </div>
     {% endif %}
 
-<!-- VITRINE 1 -->
+    <!-- VITRINE 1 -->
     <div class="home__container">
         {% if settings.showcaseFilter01 %}
         <section class="showcase__carousel showcase__carousel--one">
