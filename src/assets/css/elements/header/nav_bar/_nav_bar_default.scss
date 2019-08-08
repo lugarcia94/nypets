@@ -95,11 +95,20 @@
                 justify-content: space-between;
 
                 .brands__item {
-                    width: 40%;
+                    width: 100%;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                    margin: 10px auto;
+                    justify-content: flex-start;
+                    margin: 0 auto;
+
+                    .brands__link {
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 30px;
+                        padding-left: 0;
+                        color: #00a3d8;
+                        text-transform: uppercase;
+                    }
                 }
             }
 
